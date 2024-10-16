@@ -27,7 +27,7 @@ jobs:
         run: |
           npm ci
           npx astro check # TODO: revert to npm run build after goes live at final url
-          npx astro build --base astro-blog
+          npx astro build
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
