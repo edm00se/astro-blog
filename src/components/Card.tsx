@@ -19,7 +19,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   return (
     <li className="my-6">
       <div className="hero-image">
-        {cover_image && <img width={1020} height={510} src={"cover_images/" + cover_image} alt="" />}
+        {cover_image && <img width={1020} height={510} src={"/cover_images/" + cover_image} alt="" />}
       </div>
       <a
         href={href}
