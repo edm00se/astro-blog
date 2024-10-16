@@ -3,6 +3,12 @@ import type socialIcons from "@assets/socialIcons";
 export type Site = {
   website: string;
   author: string;
+  user: string;
+  gravatar: {
+    url: string;
+    width: string;
+    height: string;
+  };
   profile: string;
   desc: string;
   title: string;
