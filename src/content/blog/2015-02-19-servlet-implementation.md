@@ -1,9 +1,9 @@
 ---
-title: 'Servlet Implementation'
-description: 'time for a ServletFactory'
+title: "Servlet Implementation"
+description: "time for a ServletFactory"
 pubDatetime: 2015-02-19
 published: true
-tags: ['xpages', 'domino', 'java', 'servlet']
+tags: ["xpages", "domino", "java", "servlet"]
 series: xpages-servlets
 canonical_url: false
 category: xpages-servlets
@@ -17,7 +17,7 @@ The [first post](/xpages-servlets/servlet-intro-and-flavors) covered the first t
 
 ### ServletFactory
 
-[A factory is](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)), [in OOP](https://en.wikipedia.org/wiki/Object-oriented_programming), an object for creating other objects. In order for these servlets to be "registered" with the application to be end point accessible, they need to be provided by a ServletFactory; specifically, one that implements `com.ibm.designer.runtime.domino.adapter.IServletFactory`. This will register an end point via a pair of `Map`s which match, via a key, the package.class name to the end point name. This makes the servlet accessible via `<your NSF>/xsp/<end-point-name>`.
+[A factory is](<https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)>), [in OOP](https://en.wikipedia.org/wiki/Object-oriented_programming), an object for creating other objects. In order for these servlets to be "registered" with the application to be end point accessible, they need to be provided by a ServletFactory; specifically, one that implements `com.ibm.designer.runtime.domino.adapter.IServletFactory`. This will register an end point via a pair of `Map`s which match, via a key, the package.class name to the end point name. This makes the servlet accessible via `<your NSF>/xsp/<end-point-name>`.
 
 #### A Note on IServletFactory
 
@@ -49,7 +49,6 @@ Then do the same, selecting file, and call it `com.ibm.xsp.adapter.servletFactor
 com.eric.test.ServletFactory
 ```
 
-
 ### Registering Your Servlet Classes
 
 Now that we finally have our `adapter.servletFactory` file pointing at our ServletFactory Class, we can start adding them into the ServletFactory. Here's one I prepared earlier.
@@ -58,11 +57,11 @@ Now that we finally have our `adapter.servletFactory` file pointing at our Servl
 
 Aside from a bit of voodoo, this should show how we can map our end point names to the class names and proper names, respectively. As you can see, I mapped each of my example servlets (`HttpServlet`, `DesignerFacesServlet`, and `AbstractXSPServlet`) from the last post into respective endpoint names/keys. The table below shows the resulting mapping of the endpoint (after the server/path/NSF/).
 
-| Servlet Endpoint                       | Servlet Class                                 | Name                 |
-| -------------------------------------- | --------------------------------------------- | -------------------- |
-| /xsp/exhttpservlet                     | com.hello.servlets.ExampleHttpServlet         | Example HttpServlet             |
-| /xsp/exdesignerfacesservlet            | com.hello.servlets.ExampleDesignerFacesServlet| Example DesignerFacesServlet |
-| /xsp/exabstractservlet                 | com.hello.servlets.ExampleAbstractedServlet   | Example AbstractXSPServlet |
+| Servlet Endpoint            | Servlet Class                                  | Name                         |
+| --------------------------- | ---------------------------------------------- | ---------------------------- |
+| /xsp/exhttpservlet          | com.hello.servlets.ExampleHttpServlet          | Example HttpServlet          |
+| /xsp/exdesignerfacesservlet | com.hello.servlets.ExampleDesignerFacesServlet | Example DesignerFacesServlet |
+| /xsp/exabstractservlet      | com.hello.servlets.ExampleAbstractedServlet    | Example AbstractXSPServlet   |
 
 ### Summary
 

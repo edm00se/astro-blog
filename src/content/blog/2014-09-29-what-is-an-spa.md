@@ -3,7 +3,7 @@ title: "What's an SPA?"
 description: "leveraging browser loading for a smoother user experience"
 pubDatetime: 2014-09-29
 published: true
-tags: ['xpages', 'spa', 'angularjs', 'rest']
+tags: ["xpages", "spa", "angularjs", "rest"]
 category: spa
 permalink: /what-is-an-spa/
 redirect_from: /spa/what-is-an-spa/

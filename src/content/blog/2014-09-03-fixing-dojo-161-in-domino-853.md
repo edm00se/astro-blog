@@ -1,9 +1,9 @@
 ---
-title: 'Fixing Dojo 1.6.1 in Domino 8.5.3'
-description: 'fixing dojo 1.6.1 in Domino 8.5.3'
+title: "Fixing Dojo 1.6.1 in Domino 8.5.3"
+description: "fixing dojo 1.6.1 in Domino 8.5.3"
 pubDatetime: 2014-09-03
 published: true
-tags: ['xpages', 'domino', 'java', 'json', 'data', 'xagent', 'angularjs']
+tags: ["xpages", "domino", "java", "json", "data", "xagent", "angularjs"]
 category: xpages
 permalink: /fixing-dojo-161-in-domino-853/
 redirect_from: /xpages/fixing-dojo-161-in-domino-853/

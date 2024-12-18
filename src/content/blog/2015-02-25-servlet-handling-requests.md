@@ -1,10 +1,10 @@
 ---
-title: 'Handling Requests in a Servlet'
-description: 'dare we get RESTful?'
+title: "Handling Requests in a Servlet"
+description: "dare we get RESTful?"
 pubDatetime: 2015-02-25
 published: true
 series: xpages-servlets
-tags: ['xpages', 'domino', 'java', 'servlet']
+tags: ["xpages", "domino", "java", "servlet"]
 canonical_url: false
 category: xpages-servlets
 permalink: /servlet-handling-requests/
@@ -19,9 +19,9 @@ So far in [this series](/servlet-series/) I've covered some [basics](/xpages-ser
 
 A servlet can be just about anything. It can receive a payload of data (or just handle a simple network GET request) and process and return almost anything. Ultimately, I want to provide RESTful API interaction to the front-end side of my application, by:
 
-* abstracting the CRUD operations, in order to
-* validate received data changes (not committing changes in case of failure, throwing an error, with messages, to the user)
-* and provide a layer of business logic for those interactions, enforcing a set of rules by which all data objects will adhere to (I have previously described this as "loose schema", which is a misnomer, as the entire purpose of a schema is to provide [_strict_ provisioning](https://en.wikipedia.org/wiki/Database_schema) at the db level; aka- integrity constraints)
+- abstracting the CRUD operations, in order to
+- validate received data changes (not committing changes in case of failure, throwing an error, with messages, to the user)
+- and provide a layer of business logic for those interactions, enforcing a set of rules by which all data objects will adhere to (I have previously described this as "loose schema", which is a misnomer, as the entire purpose of a schema is to provide [_strict_ provisioning](https://en.wikipedia.org/wiki/Database_schema) at the db level; aka- integrity constraints)
 
 ### Receiving Requests
 
@@ -29,19 +29,18 @@ As I've mentioned above, I've referenced a pattern of /collection/{:id} for an e
 
 #### Formatting and Documentation
 
-| Route                   | Methods Allowed        |
-|-------------------------|------------------------|
-| .../collection          | GET                    |
-| .../collection/{:id}    | GET, POST, PUT, DELETE |
+| Route                | Methods Allowed        |
+| -------------------- | ---------------------- |
+| .../collection       | GET                    |
+| .../collection/{:id} | GET, POST, PUT, DELETE |
 
 One major benefit of using a REST API framework in Java is the ability to automate your documentation. Documentation is one of the most important aspects of REST APIs (especially in publicly accessible ones), as if those who will consume them don't know how to interact with them, they won't be worth anything. Usually documentation includes the endpoints, allowed methods, and request and response structure.
-
 
 #### Route Matching
 
 We'll be handling multiple routed paths off a single collection endpoint (the collection and the collection/{:id}). The approach I'll be implementing in the route matching will make use of regular expressions. This involves defining a pattern and testing that against the requested path for a match. This will make use of _java.util.regex.Pattern_ and _java.util.regex.Matcher_, respectively.
 
-Since we will get a true match with [_Matcher.find()_](https://docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#find()) from a partial subset, it's important to test in a descending order from the more complex endpoint down to the simplest; the raw collection. It probably ought to look something like this:
+Since we will get a true match with [_Matcher.find()_](<https://docs.oracle.com/javase/6/docs/api/java/util/regex/Matcher.html#find()>) from a partial subset, it's important to test in a descending order from the more complex endpoint down to the simplest; the raw collection. It probably ought to look something like this:
 
 {% gist "edm00se", "7d1abeb5ee555631b638b3299cd66998", "routeMatching.java" %}
 
@@ -65,11 +64,11 @@ Route parameters are a way of handling required, hierarchically defining values 
 
 #### Query Parameters
 
-Query parameters should be familiar to every XPages developer. <s>In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String&gt;_ as opposed to performing a _split_ on the [_queryString_](//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()) of the _HttpServletRequest_.</s>
+Query parameters should be familiar to every XPages developer. <s>In fact, it's so normal that I'll just mentioned that you may wish to use a _VariableResolver_ to populate your _Map&lt;String, String&gt;_ as opposed to performing a _split_ on the [_queryString_](<//docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getQueryString()>) of the _HttpServletRequest_.</s>
 
 [Edit]
 
-Thanks to [Jesse Gallagher](//twitter.com/Gidgerby) for catching something here. You can resolve _param_, but it would be better to use something else as it behaves as a _Map&lt;String,String&gt;_, **not** a _Map&lt;String,String[]&gt;_. If you're performing an _HttpServletRequest.getQueryString()_,  you will get a _java.lang.String_ back, with which contains your results. You can manually pull this apart, but you should really use the [**_getParameterMap_** method](//docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html#getParameterMap()) on your _HttpServletRequest_ (the method is inherited from _ServletRequest_) as this _does return_ a _Map&lt;String,String[]&gt;_, ensuring you get keyed values for each of multiple values per key. I've used the method elsewhere, I'm not sure what my brain was thinking up above, but I suspect it was a lack of caffeine âï¸.
+Thanks to [Jesse Gallagher](//twitter.com/Gidgerby) for catching something here. You can resolve _param_, but it would be better to use something else as it behaves as a _Map&lt;String,String&gt;_, **not** a _Map&lt;String,String[]&gt;_. If you're performing an _HttpServletRequest.getQueryString()_, you will get a _java.lang.String_ back, with which contains your results. You can manually pull this apart, but you should really use the [**_getParameterMap_** method](<//docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html#getParameterMap()>) on your _HttpServletRequest_ (the method is inherited from _ServletRequest_) as this _does return_ a _Map&lt;String,String[]&gt;_, ensuring you get keyed values for each of multiple values per key. I've used the method elsewhere, I'm not sure what my brain was thinking up above, but I suspect it was a lack of caffeine âï¸.
 
 ```java
 Map<String, String[]> param = (Map<String, String[]>) req.getParameterMap();

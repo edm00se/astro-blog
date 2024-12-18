@@ -1,9 +1,9 @@
 ---
-title: 'When You Need a Comparator'
-description: 'sorting a Collection how you want'
+title: "When You Need a Comparator"
+description: "sorting a Collection how you want"
 pubDatetime: 2015-01-09
 published: true
-tags: ['xpages', 'java', 'bean', 'comparator']
+tags: ["xpages", "java", "bean", "comparator"]
 category: java
 permalink: /when-you-need-a-comparator/
 redirect_from: /java/when-you-need-a-comparator/
@@ -25,7 +25,7 @@ But you're here for the code. Here's an incredibly simple select tag implemented
 
 ### A Comparator
 
-Enter [java.util.Comparator](https://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html). It's a member of the Collections Framework, making it ideal for sorting Collections (which a List is). So, to begin, we'll define a class (you can nest it in another class, as I have, a stand-alone class, or a member of another, utility class). This class contains a single, public compare method, which returns an int. It returns an int, as that's what's returned by the [compareToIgnoreCase method of java.lang.String](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#compareToIgnoreCase(java.lang.String)). All the compare method is doing is comparing whether the first string is before or after the second string.
+Enter [java.util.Comparator](https://docs.oracle.com/javase/7/docs/api/java/util/Comparator.html). It's a member of the Collections Framework, making it ideal for sorting Collections (which a List is). So, to begin, we'll define a class (you can nest it in another class, as I have, a stand-alone class, or a member of another, utility class). This class contains a single, public compare method, which returns an int. It returns an int, as that's what's returned by the [compareToIgnoreCase method of java.lang.String](<https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#compareToIgnoreCase(java.lang.String)>). All the compare method is doing is comparing whether the first string is before or after the second string.
 
 ### Code
 

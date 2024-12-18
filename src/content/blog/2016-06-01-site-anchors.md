@@ -1,9 +1,9 @@
 ---
-title: 'Site Anchors'
-description: 'a simple thing can be overcomplicated'
+title: "Site Anchors"
+description: "a simple thing can be overcomplicated"
 pubDatetime: 2016-06-01
 published: true
-tags: ['web', 'css', 'javascript', 'plugin', 'jquery', 'xpages']
+tags: ["web", "css", "javascript", "plugin", "jquery", "xpages"]
 canonical_url: false
 category: web
 permalink: /site-anchors/
@@ -41,10 +41,10 @@ If you would prefer to skip ahead, [just view my blog's pertaining diff](https:/
 
 #### The Concept
 
-* create hyperlinks
-* for the header elements
-* with some "link" indication
-* show on hover
+- create hyperlinks
+- for the header elements
+- with some "link" indication
+- show on hover
 
 #### The Implementation
 
@@ -59,9 +59,11 @@ I've always found that the simpler an implementation is, the better it holds up.
 {% gist "edm00se", "5b7b74eaae43598656e614c6d1a53389", "anchors.js" %}
 
 ### Recommendations for Web Applications
+
 As mentioned before, if there are _consistently availabe_ *id*s, they can be passed between users pretty successfully. If those _id_ attributes are computed dynamically as with XPages controls and elements, this is problematic (but expected, as you could potentially implement a Custom Control multiple times in an XPage, so unique namespaces are required).
 
 #### What to Avoid
+
 Repeating an _id_ attribute is pretty terrible practice, so below when I describe passing through an _id_, please keep this in mind: **repeating an _id_ on a page will only work for the first element with that _id_**.
 
 This embedded example has multiple sets of five `h3` tags, each with corresponding `a` (anchor) tags pointing at their _id_ via the hash (`href="#<id>"`) method. If you scroll down to the second or third block and click a link, you'll note that the window (in the `iframe`) takes you to the first element with that _id_.
@@ -70,10 +72,11 @@ This embedded example has multiple sets of five `h3` tags, each with correspondi
 
 If you anticipate certain known points, you can do a couple of things, most of which amounts to either:
 
-* passing through an HTML tag to define its _id_ in a static fashion
-* controlling the computation of the _id_, say via `xp:attr`
+- passing through an HTML tag to define its _id_ in a static fashion
+- controlling the computation of the _id_, say via `xp:attr`
 
 Chris Toohey did a great job recently of covering the options for this, and [his blog post on the subject](https://www.dominoguru.com/page.xsp?id=control_rendered_html_id_ibm_domino_xpages.html) goes into pretty good detail on doing just this with XPages.
 
 ### Summary
+
 All in all, I had something neat, it didn't work "in production", and instead of fiddling to far with it, I remembered that I'm a developer and this is easy stuff. It's also a pretty useful feature I use pretty regularly, so I'm just looking to share the lesson learned. Until next time, 🍻!

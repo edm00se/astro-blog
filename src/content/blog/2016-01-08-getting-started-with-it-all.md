@@ -1,9 +1,9 @@
 ---
-title: 'Starting Small to Go Big'
-description: 'preparing your workspace for glorious development'
+title: "Starting Small to Go Big"
+description: "preparing your workspace for glorious development"
 pubDatetime: 2016-01-08
 published: true
-tags: ['dde', 'scm', 'git', 'cli', 'node', 'npm', 'structure']
+tags: ["dde", "scm", "git", "cli", "node", "npm", "structure"]
 canonical_url: false
 category: xpages
 permalink: /getting-started-wtih-it-all/
@@ -28,9 +28,9 @@ If you've been wanting to dive in but have felt that there's a whole bag of snak
 
 Many of the topics have been previously covered by myself and others, but this should serve as a good starting point for those looking for references and material. There are several elements involved, specifically:
 
-* setting up your application with source control
-* layout out the application's project structure for the source control repository
-* segregating source files from the "build" path
+- setting up your application with source control
+- layout out the application's project structure for the source control repository
+- segregating source files from the "build" path
 
 ### Source Control with Domino Designer
 
@@ -44,16 +44,16 @@ I also strongly recommend installing and using [Cameron Gregor's Swiper plugin](
 
 The layout of an On Disk Project follows what is in an actual NSF file, as there's a related design element with any config or metadata information stored alongside of it. Here's a file tree of what an On Disk Project should look like.
 
-	ODP
-	├── AppProperties
-	├── Code
-	├── CustomControls
-	├── Forms
-	├── Resources
-	├── Views
-	├── WebContent
-	├── XPages
-	└── plugin.xml
+    ODP
+    ├── AppProperties
+    ├── Code
+    ├── CustomControls
+    ├── Forms
+    ├── Resources
+    ├── Views
+    ├── WebContent
+    ├── XPages
+    └── plugin.xml
 
 I've taken the approach that my client-side heavy applications (e.g.- exclusively AngularJS or whatever JS framework I'm using) all operate out of my `...NSF/WebContent/` folder, which makes them easily served directly as normal web assets. There are minor complications to this when making your `WebContent` assets default have public access, the solution being to run an agent against those design elements and set the public permissions; a [topic covered well by John Dalsgaard](https://www.dalsgaard-data.eu/blog/public-access-to-e-g-an-angular-app-in-your-notes-database/).
 
@@ -63,60 +63,60 @@ Since we're keeping the On Disk Project inside another folder, this parent folde
 
 Before I get into the last bit about optimizing builds ('dist' versions, which are minified, uglified, concatenated, etc.), please note that our project folder, which contains our ODP, is laid out as follows.
 
-	parent-project-folder
-	├── .git
-	└── ODP
-			├── AppProperties
-			├── Code
-			│   ├── Agents
-			│   ├── Java
-			│   └── actions
-			├── CustomControls
-			├── Forms
-			├── Resources
-			│   ├── Images
-			│   ├── StyleSheets
-			│   └── Themes
-			├── Views
-			├── WebContent
-			│   ├── WEB-INF
-			│   ├── css
-			│   ├── js
-			│   └── partials
-			└── XPages
+    parent-project-folder
+    ├── .git
+    └── ODP
+    		├── AppProperties
+    		├── Code
+    		│   ├── Agents
+    		│   ├── Java
+    		│   └── actions
+    		├── CustomControls
+    		├── Forms
+    		├── Resources
+    		│   ├── Images
+    		│   ├── StyleSheets
+    		│   └── Themes
+    		├── Views
+    		├── WebContent
+    		│   ├── WEB-INF
+    		│   ├── css
+    		│   ├── js
+    		│   └── partials
+    		└── XPages
 
 Since we're tracking the ODP _inside_ of the git repository, that means we can set up a space for the unmodified original sources in the parent directory and we can track them entirely separate from the ODP. What this means is, once we adopt a task runner into the equation (Grunt or gulp); my [blog series on task runners with Domino](https://edm00se.io/task-runners-with-domino-apps) goes a bit more in-depth. So, if you're going to be build optimizing your web assets (concatenating your `.js` files, uglifying and minifying, for instance), you should keep your un-modified source in a source folder, such as `src`. Your project's repository should now look something like this:
 
-	parent-project-folder
-	├── Gruntfile.js
-	├── ODP
-	│   ├── WebContent
-	│   └── AppProperties
-	│	    ├── Code
-	│	    │   ├── Agents
-	│	    │   ├── Java
-	│	    │   └── actions
-	│	    ├── CustomControls
-	│	    ├── Forms
-	│	    ├── Resources
-	│	    │   ├── Images
-	│	    │   ├── StyleSheets
-	│	    │   └── Themes
-	│	    ├── Views
-	│	    ├── WebContent
-	│	    │   ├── WEB-INF
-	│	    │   ├── css
-	│	    │   ├── js
-	│	    │   └── partials
-	│	    └── XPages
-	├── bower.json
-	├── gulpfile.js
-	└── src
-			├── css
-			├── index.html
-			├── js
-			├── libs
-			└── partials
+    parent-project-folder
+    ├── Gruntfile.js
+    ├── ODP
+    │   ├── WebContent
+    │   └── AppProperties
+    │	    ├── Code
+    │	    │   ├── Agents
+    │	    │   ├── Java
+    │	    │   └── actions
+    │	    ├── CustomControls
+    │	    ├── Forms
+    │	    ├── Resources
+    │	    │   ├── Images
+    │	    │   ├── StyleSheets
+    │	    │   └── Themes
+    │	    ├── Views
+    │	    ├── WebContent
+    │	    │   ├── WEB-INF
+    │	    │   ├── css
+    │	    │   ├── js
+    │	    │   └── partials
+    │	    └── XPages
+    ├── bower.json
+    ├── gulpfile.js
+    └── src
+    		├── css
+    		├── index.html
+    		├── js
+    		├── libs
+    		└── partials
 
 When my build task runs to generate my optimized client-side elements, it outputs to the ODP's `WebContent/` in the appropriate paths (`css/`, `js/`, etc.). This means that when I work from a non-DDE environment on my client-side assets in my preferred IDE/editor, I don't need to interact directly with anything in my NSF or even the ODP, just the `src/` contents; as my task runner picks up on my changes after a save event, it fires off the fresh build and shoves it into the ODP, which then should sync with DDE.
 
@@ -134,9 +134,9 @@ Speaking of my blog series, you'll notice that I took an approach to using a bac
 
 I love the Java editor from Eclipse; it has great JavaDoc integration and syntax awareness that aids me in my day-to-day work in Java. Sadly, the JavaScript editor in DDE is pretty vanilla by comparison. Thankfully, the explosion in front-end development has benefitted everyone in that department. There are basically three that I feel are worth mentioning at the moment, which are:
 
-* [Atom](https://atom.io/), free, as in Open Source, and made by GitHub, described as "hackable" (aka- you can customize its component parts)
-* [SublimeText](https://www.sublimetext.com/) 3, described as a "smart text editor" geared for code and markup. You may as well skip version 2 and go straight to 3, which is still (somehow) in beta and free for use until it hits full production when it will be $70 for a single-user license (associated to either a company or you, the developer, for cross-platform use of the same license); the only annoyance for free users is the occasional pop up reminder after a file save, but hey, it's free!
-* [WebStorm](https://www.jetbrains.com/webstorm/), described as "the smartest JavaScript IDE", with a slew of pretty excellent features. The biggest detractor IMO is after the free 30-day trial, it has a recurring annual cost ([break down here](https://www.jetbrains.com/webstorm/buy/#section=personal)), but the personal/developer annual cost isn't unreasonable and the work they keep doing keeps adding excellent features.
+- [Atom](https://atom.io/), free, as in Open Source, and made by GitHub, described as "hackable" (aka- you can customize its component parts)
+- [SublimeText](https://www.sublimetext.com/) 3, described as a "smart text editor" geared for code and markup. You may as well skip version 2 and go straight to 3, which is still (somehow) in beta and free for use until it hits full production when it will be $70 for a single-user license (associated to either a company or you, the developer, for cross-platform use of the same license); the only annoyance for free users is the occasional pop up reminder after a file save, but hey, it's free!
+- [WebStorm](https://www.jetbrains.com/webstorm/), described as "the smartest JavaScript IDE", with a slew of pretty excellent features. The biggest detractor IMO is after the free 30-day trial, it has a recurring annual cost ([break down here](https://www.jetbrains.com/webstorm/buy/#section=personal)), but the personal/developer annual cost isn't unreasonable and the work they keep doing keeps adding excellent features.
 
 ### Summary
 

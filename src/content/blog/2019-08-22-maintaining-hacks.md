@@ -1,9 +1,9 @@
 ---
-title: 'Maintaining Hacks'
-description: 'an exercise in keeping sanity through archaic needs'
+title: "Maintaining Hacks"
+description: "an exercise in keeping sanity through archaic needs"
 pubDatetime: 2019-08-22
 published: true
-tags: ['web', 'architecture', 'structure', 'amp', 'mobile', 'content']
+tags: ["web", "architecture", "structure", "amp", "mobile", "content"]
 canonical_url: false
 category: web
 permalink: /maintaining-hacky-workarounds/

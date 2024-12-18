@@ -1,9 +1,9 @@
 ---
-title: 'Nerdy Yet Awesome'
-description: 'using web development skills for less conventional purposes'
+title: "Nerdy Yet Awesome"
+description: "using web development skills for less conventional purposes"
 pubDatetime: 2016-02-26
 published: true
-tags: ['node', 'npm', 'cli', 'emoji', 'markdown', 'gitbook', 'yeoman']
+tags: ["node", "npm", "cli", "emoji", "markdown", "gitbook", "yeoman"]
 canonical_url: false
 category: web
 permalink: /going-super-nerd/
@@ -24,9 +24,9 @@ How nerdy was it? We'll get to that by the end and I'll let you be the judge. Th
 
 Ultimately, my task was to:
 
-* scan my existing files for occurrences (such as `:beers:`, which happens a surprising amount)
-* register what needed to be replaced
-* replace with a corresponding HTML image tag (or the md image markup, with an `img` tag  and a `src` attribute pointing to a copy of an image file corresponding to the short code `src="https://path/to/beers.png`"`)
+- scan my existing files for occurrences (such as `:beers:`, which happens a surprising amount)
+- register what needed to be replaced
+- replace with a corresponding HTML image tag (or the md image markup, with an `img` tag and a `src` attribute pointing to a copy of an image file corresponding to the short code `src="https://path/to/beers.png`"`)
 
 ### Something Neat
 
@@ -49,7 +49,7 @@ Ultimately, not caring about the simple "emojis" (such as `:-D`), rather just th
 To make a long story short (ending with a space after the colon, or sentence ending character and accounting for a `+` or `-` explicit character), you can find [my full RegEx test on regex101.com](https://regex101.com/r/hI5qF5/1). The expression I settled on is:
 
 ```javascript
-/(\:(\w|\+|\-)+\:)(?=\s|[\!\.\?]|$)/gim
+/(\:(\w|\+|\-)+\:)(?=\s|[\!\.\?]|$)/gim;
 ```
 
 Hopefully that makes sense after my description above, if not, check out the RegEx101.com link, as they have some helpful tools on the side that explain character matching and match successes, etc.
@@ -86,7 +86,7 @@ To add it into my build task, after calling my `npm install` (and `gitbook insta
 
 ### One Step Further
 
-Since I had created something neat I hadn't seen before (my search for an existing npm package was negligible for my purposes), I was able to tackle a small challenge in an environment I was previously less knowledgable in. It also gave me an opportunity to try out something else new in a more in-depth fashion; [yeoman](https://yeoman.io/)'s [generator-node](https://github.com/yeoman/generator-node). For those that have [followed my blog series on task runners](//task-runners-with-domino-apps), caught [my recent IBM Connect session](https://github.com/edm00se/BeardAppBlender/) in-person or the pending release of my Notes in 9 of my session's highlights, you may be aware that I've mentioned that when it comes to yeoman, there seems to be a generator for nearly everything. Using `generator-node`, I was able to fairly quickly scaffold out a full project that's a nicely contained npm package which is installable from the npm registry, contains a (server) module for use via a `require` statement [in a JavaScript context](https://tonicdev.com/edm00se/emoji-transmogrifier), or as a command [via the cli](https://github.com/edm00se/emoji-transmogrifier#cli-utility). It even has unit tests, continuous integration [via travis-ci](https://travis-ci.org/edm00se/emoji-transmogrifier), [dependency checking via david-dm](https://david-dm.org/edm00se/emoji-transmogrifier), [code coverage reporting via codecov](https://codecov.io/github/edm00se/emoji-transmogrifier), and...  you get the picture, just check the readme's badges at the top.
+Since I had created something neat I hadn't seen before (my search for an existing npm package was negligible for my purposes), I was able to tackle a small challenge in an environment I was previously less knowledgable in. It also gave me an opportunity to try out something else new in a more in-depth fashion; [yeoman](https://yeoman.io/)'s [generator-node](https://github.com/yeoman/generator-node). For those that have [followed my blog series on task runners](//task-runners-with-domino-apps), caught [my recent IBM Connect session](https://github.com/edm00se/BeardAppBlender/) in-person or the pending release of my Notes in 9 of my session's highlights, you may be aware that I've mentioned that when it comes to yeoman, there seems to be a generator for nearly everything. Using `generator-node`, I was able to fairly quickly scaffold out a full project that's a nicely contained npm package which is installable from the npm registry, contains a (server) module for use via a `require` statement [in a JavaScript context](https://tonicdev.com/edm00se/emoji-transmogrifier), or as a command [via the cli](https://github.com/edm00se/emoji-transmogrifier#cli-utility). It even has unit tests, continuous integration [via travis-ci](https://travis-ci.org/edm00se/emoji-transmogrifier), [dependency checking via david-dm](https://david-dm.org/edm00se/emoji-transmogrifier), [code coverage reporting via codecov](https://codecov.io/github/edm00se/emoji-transmogrifier), and... you get the picture, just check the readme's badges at the top.
 
 [![NPM](https://badge.fury.io/js/emoji-transmogrifier.svg)](https://npm.im/emoji-transmogrifier)
 

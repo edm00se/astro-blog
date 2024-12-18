@@ -1,10 +1,10 @@
 ---
-title: 'Headless DDE Builds With Jenkins CI'
-description: 'automation is king'
+title: "Headless DDE Builds With Jenkins CI"
+description: "automation is king"
 pubDatetime: 2016-03-25
 published: true
 series: build-automation
-tags: ['xpages', 'dde', 'jenkins']
+tags: ["xpages", "dde", "jenkins"]
 canonical_url: false
 category: xpages
 permalink: /headless-dde-and-jenkins/
@@ -14,38 +14,38 @@ toc: true
 
 ### Intro
 
-[Last time](/xpages/xsltproc-and-headless-dde/) I described a major building block which has made my efforts to have a build automation machine (in the process of being turned into a vm) for  my largest application. This includes a number of advantages, from being able to produce a copy of the application design at a given commit/tag/version from its git repository on demand or on schedule. It also means that the many possibilities when it comes to being able to hook in the creation of a current javadoc, unit testing, and more. The sky is the limit and I'm setting down some of what I do with my current headless dde build task from my Jenkins CI instance.
+[Last time](/xpages/xsltproc-and-headless-dde/) I described a major building block which has made my efforts to have a build automation machine (in the process of being turned into a vm) for my largest application. This includes a number of advantages, from being able to produce a copy of the application design at a given commit/tag/version from its git repository on demand or on schedule. It also means that the many possibilities when it comes to being able to hook in the creation of a current javadoc, unit testing, and more. The sky is the limit and I'm setting down some of what I do with my current headless dde build task from my Jenkins CI instance.
 
-Please note, I'm not much in favor of repeating myself or others' works. While I wrote a fair amount about some of the basics of task runner use, much of which can be found elsewhere, I did so to build a platform for the uninitiated, as my focus was always on the end goal of how it hooks into my development workflow; the workflow of a  developer with Domino/XPages, that's the unique aspect. When it comes to this post, I won't be talking about the details of what to do to create a Jenkins CI instance or perform some of the already well established requirements, but rather I'm going to assume that:
+Please note, I'm not much in favor of repeating myself or others' works. While I wrote a fair amount about some of the basics of task runner use, much of which can be found elsewhere, I did so to build a platform for the uninitiated, as my focus was always on the end goal of how it hooks into my development workflow; the workflow of a developer with Domino/XPages, that's the unique aspect. When it comes to this post, I won't be talking about the details of what to do to create a Jenkins CI instance or perform some of the already well established requirements, but rather I'm going to assume that:
 
-* you know what [headless designer](https://www-10.lotus.com/ldd/ddwiki.nsf/dx/Headless_Designer_Wiki) (dde) means
-* you're familiar with what [Jenkins CI](https://jenkins.io/) is
-* you've read a combination of [Cameron Gregor's](https://camerongregor.com/2014/08/09/build-system-for-xpages-and-osgi-plugins/) blog post [Martin Pradny's](https://www.pradny.com/2014/03/build-xpages-app-from-git-with-jenkins.html) post on the subject; I recommend both
-* you know that [automating this stuff](https://www.youtube.com/watch?v=6BIDNfOrnAY) is possibly one of the coolest things ever
+- you know what [headless designer](https://www-10.lotus.com/ldd/ddwiki.nsf/dx/Headless_Designer_Wiki) (dde) means
+- you're familiar with what [Jenkins CI](https://jenkins.io/) is
+- you've read a combination of [Cameron Gregor's](https://camerongregor.com/2014/08/09/build-system-for-xpages-and-osgi-plugins/) blog post [Martin Pradny's](https://www.pradny.com/2014/03/build-xpages-app-from-git-with-jenkins.html) post on the subject; I recommend both
+- you know that [automating this stuff](https://www.youtube.com/watch?v=6BIDNfOrnAY) is possibly one of the coolest things ever
 
 ### What We Need
 
-* Windows OS w/
-  * Domino Designer installed for headless DDE builds
-  * Notes SSO (so no pw prompt; this worked for me, others have recommended a Notes ID w/ no password, use your discretion or a friendly aligned admin's discretion)
-  * `DESIGNER_AUTO_ENABLED=true` set in `notes.ini`
-  * similar/same Designer and Server environments
-    * at same FP/version as server environments
-    * any dependent OSGi plugins for DDE installed
-    * any dependent JARs from server/apps installed to `<installDir>/jvm/lib/ext/`
-  * (optional) recommended: Notes Client Killer installed
-* Jenkins CI installed as an "app"
-  * to run as logged in user (does not happen if done as a Windows service, sadly; gets a little fiddly)
-  * configured to allow interacting with the desktop (may only apply to Jenkins as a service, but it's set up in my environment)
-  * task will contain (by my implementation) 4 steps (optional 5th)
-    1. (optional*, unless large NSF w/ build issues) the xslt processing assets (from [my last blog post](/xpages/xsltproc-and-headless-dde/)) to ensure a clean ODP import by headless DDE
+- Windows OS w/
+  - Domino Designer installed for headless DDE builds
+  - Notes SSO (so no pw prompt; this worked for me, others have recommended a Notes ID w/ no password, use your discretion or a friendly aligned admin's discretion)
+  - `DESIGNER_AUTO_ENABLED=true` set in `notes.ini`
+  - similar/same Designer and Server environments
+    - at same FP/version as server environments
+    - any dependent OSGi plugins for DDE installed
+    - any dependent JARs from server/apps installed to `<installDir>/jvm/lib/ext/`
+  - (optional) recommended: Notes Client Killer installed
+- Jenkins CI installed as an "app"
+  - to run as logged in user (does not happen if done as a Windows service, sadly; gets a little fiddly)
+  - configured to allow interacting with the desktop (may only apply to Jenkins as a service, but it's set up in my environment)
+  - task will contain (by my implementation) 4 steps (optional 5th)
+    1. (optional\*, unless large NSF w/ build issues) the xslt processing assets (from [my last blog post](/xpages/xsltproc-and-headless-dde/)) to ensure a clean ODP import by headless DDE
     2. (optional) Notes Client Killer (helps, in case Jenkins task +/- headless DDE gets hung; at a minimum, have a separate Jenkins task to call the client killer)
     3. PowerShell (installed for Windows, also a PS script, below) to execute the headless DDE build
     4. scan the `HEADLESS0.log` for whether to mark the task a failure (Jenkins had mis-reported "SUCCESS" when the headless DDE call failed to build a usable NSF)
     5. (optional) [SonarQube](https://www.sonarqube.org/) [analysis](https://docs.sonarqube.org/display/SONAR/Analyzing+Source+Code) ([previously covered](https://edm00se.io/self-promotion/docker-plus-sonarqube))
-* git/hg/scm repository access to the project(s) in question, at least visible to the Jenkins instance
-* (optional) a SonarQube (server) environment set up, scanner installed and config'd correctly for shell use w/ Jenkins
-* (optional) recommended: Color ANSI plugin (to make better console output for Jenkins)
+- git/hg/scm repository access to the project(s) in question, at least visible to the Jenkins instance
+- (optional) a SonarQube (server) environment set up, scanner installed and config'd correctly for shell use w/ Jenkins
+- (optional) recommended: Color ANSI plugin (to make better console output for Jenkins)
 
 Go ahead, I'll wait while you set it all up (yes, I'm full of snarcasm).
 

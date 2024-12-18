@@ -1,9 +1,9 @@
 ---
-title: 'Using Node to Connect to an IBM i'
-description: 'iSeries data for a Node app, micro-service, or any custom API'
+title: "Using Node to Connect to an IBM i"
+description: "iSeries data for a Node app, micro-service, or any custom API"
 pubDatetime: 2016-04-20
 published: true
-tags: ['node', 'express', 'iseries', 'jdbc', 'jt400', 'notes', 'domino', 'nsf']
+tags: ["node", "express", "iseries", "jdbc", "jt400", "notes", "domino", "nsf"]
 series: node-express-iseries-nsf
 canonical_url: false
 category: node
@@ -28,10 +28,10 @@ The funny thing about the developerWorks article was that it eventually was refa
 
 The unique dependencies here are:
 
-* [the `jt400.jar`](https://jt400.sourceforge.net/) (which my `.gitignore` is set to ignore `.jar` files, so you'll need to download and include your own copy of it; I' m parking mine at the path of `lib/jt400.jar`)
-* the npm package `jdbc-pro` (which makes its main jdbc module accessible via a `require('jdbc')` statement); install via `npm i -S jdbc-pro`
+- [the `jt400.jar`](https://jt400.sourceforge.net/) (which my `.gitignore` is set to ignore `.jar` files, so you'll need to download and include your own copy of it; I' m parking mine at the path of `lib/jt400.jar`)
+- the npm package `jdbc-pro` (which makes its main jdbc module accessible via a `require('jdbc')` statement); install via `npm i -S jdbc-pro`
 
-Part of why you'll need to download and include your own copy is, while I know the project to be open sourced from IBM under the [IBM Public License 1.0](https://opensource.org/licenses/ibmpl.php), I'm just not familiar with that license. For those looking for one, the [tldr legal page for IBMPL](https://tldrlegal.com/license/ibm-public-license-1.0-(ipl)) does a good job summarizing the conditions of the license.
+Part of why you'll need to download and include your own copy is, while I know the project to be open sourced from IBM under the [IBM Public License 1.0](https://opensource.org/licenses/ibmpl.php), I'm just not familiar with that license. For those looking for one, the [tldr legal page for IBMPL](<https://tldrlegal.com/license/ibm-public-license-1.0-(ipl)>) does a good job summarizing the conditions of the license.
 
 ### Specifics With IBM i and JT400
 
@@ -57,10 +57,10 @@ Lastly, I export those two primary functions as a JS object (as methods) to be c
 
 Now that my connections are configured and my data handling is provisioned, all I need to do is invoke it in my various `routes`. As you can see from my data `util` module, the exposed `query` method is simple enough to use:
 
-* `require` the module
-* call the `query` (or `update`) method
-* passing in the SQL query and
-* a function, which has two parameters, error or data
+- `require` the module
+- call the `query` (or `update`) method
+- passing in the SQL query and
+- a function, which has two parameters, error or data
 
 This way, if the error handle is null, it will not execute the error block, and vice versa. At this point, I hope the up-front modularizing is starting to show off its utility, as the implementation is about as simple as you can get.
 

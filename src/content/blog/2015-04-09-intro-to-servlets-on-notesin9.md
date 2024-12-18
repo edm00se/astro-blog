@@ -1,9 +1,9 @@
 ---
-title: 'A Video on Servlets'
-description: 'an announcement and a couple random thoughts'
+title: "A Video on Servlets"
+description: "an announcement and a couple random thoughts"
 pubDatetime: 2015-04-09
 published: true
-tags: ['xpages', 'domino', 'java', 'servlets', 'ni9']
+tags: ["xpages", "domino", "java", "servlets", "ni9"]
 category: self-promotion
 permalink: /intro-to-servlets-on-notesin9/
 redirect_from: /self-promotion/intro-to-servlets-on-notesin9/
@@ -29,7 +29,6 @@ Bottom line, I hope for this to be only the first of the content I contribute to
 David Leedy said some horrendously nice things about me I'd like to clear up. I'm generally a good guy, and I like to keep things relatively clean online, but if you get to know me you'll find I have a crazy sense of humor (the downside to being a veteran and having worked in emergency medicine) and can come across strong; this is why I value and seek humility.
 
 That being said, I may sound smart on occasion, I tend to know what I know and be aware of what I don't, I will never claim to be the smartest person in any room. I value intelligence in all its forms, from raw knowledge to deductive reasoning or plain and simple critical thinking. I also have the great advantage of being a (relatively new) member of an excellent community, which has a number of greatly talented members, who by far out shine my abilities, and I'm happy to be counted among them.
-
 
 ### A Promise
 

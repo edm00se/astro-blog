@@ -18,7 +18,7 @@ Regardless of your being for or against statically typing and transpiling your J
 
 !["the (un)titled goose"./images/untitledGoose.png)
 
-*The titular antihero and miscreant of the [Untitled Goose Game](https://goose.game/)*
+_The titular antihero and miscreant of the [Untitled Goose Game](https://goose.game/)_
 
 Beyond this primary advantage, there are a good number of side benefits to using a static typed system in front of your JavaScript code base.
 
@@ -57,4 +57,4 @@ So, do you _need_ to use TypeScript or another static typing solution in your Ja
 As mentioned above, adding TS to my starter repo was easy, almost too easy. When tooling does what it should, it can lead us to great places. Here's how easy it was.
 
 !["live parcel dev server detects changes, installs typescript dep, new build is good"./images/addingTypeScript.gif)
-*adding typescript to vue components with parcel, stupid easy*
+_adding typescript to vue components with parcel, stupid easy_

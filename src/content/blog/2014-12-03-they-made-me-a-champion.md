@@ -1,9 +1,9 @@
 ---
-title: 'They Made Me A Champion'
-description: 'IBM Champion 2015'
+title: "They Made Me A Champion"
+description: "IBM Champion 2015"
 pubDatetime: 2014-12-03
 published: true
-tags: ['xpages', 'domino', 'ibm', 'champion']
+tags: ["xpages", "domino", "ibm", "champion"]
 category: self-promotion
 permalink: /they-made-me-a-champion/
 redirect_from: /self-promotion/they-made-me-a-champion/

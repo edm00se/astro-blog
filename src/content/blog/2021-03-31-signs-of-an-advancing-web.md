@@ -15,6 +15,7 @@ permalink: /signs-of-an-advancing-web/
 redirect_from: /web/signs-of-the-web-advancing/
 toc: true
 ---
+
 The web stack has been evolving and accelerating over the last few years. One of the things I don't miss is having moved on from supporting Internet Explorer. While some people are prone to comparing Safari to IE these days, a parallel in their non-evergreen deployment cycles, I would argue that's still not the case. Regardless, supporting IE was a _huge_ impediment to making use of new and available web stack features for some time.
 
 ### Handling Query Parameters

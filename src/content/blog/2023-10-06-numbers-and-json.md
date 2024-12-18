@@ -14,6 +14,7 @@ category: web
 canonical_url: false
 permalink: /json-and-number-formats/
 ---
+
 I know it's been a while, figured I'd pop up write a quick blog.
 
 ![a kraken lifting a sailing ship above water, cracking it in half, and dumping the people into the sea](./images/kraken.gif)

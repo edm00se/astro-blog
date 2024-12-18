@@ -1,9 +1,9 @@
 ---
-title: 'Building Java Objects From JSON'
-description: 'a better way'
+title: "Building Java Objects From JSON"
+description: "a better way"
 pubDatetime: 2015-01-23
 published: true
-tags: ['xpages', 'domino', 'java', 'json', 'gson', 'rest']
+tags: ["xpages", "domino", "java", "json", "gson", "rest"]
 category: java
 permalink: /building-java-objects-from-json/
 redirect_from: /java/building-java-objects-from-json/

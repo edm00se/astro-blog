@@ -1,10 +1,10 @@
 ---
-title: 'Task Runners pt.4: Another Gulp'
-description: 'more refreshing'
+title: "Task Runners pt.4: Another Gulp"
+description: "more refreshing"
 pubDatetime: 2015-12-17
 published: true
 series: task-runners-with-domino
-tags: ['grunt', 'gulp', 'git', 'scm', 'static', 'generator']
+tags: ["grunt", "gulp", "git", "scm", "static", "generator"]
 canonical_url: false
 category: web
 permalink: /task-runners-pt4-a-second-gulp/

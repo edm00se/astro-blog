@@ -1,9 +1,9 @@
 ---
-title: 'In Defense of Bower'
-description: 'and exploring npm in replacement of its front-end dependency management'
+title: "In Defense of Bower"
+description: "and exploring npm in replacement of its front-end dependency management"
 pubDatetime: 2016-06-14
 published: true
-tags: ['node', 'npm', 'bower']
+tags: ["node", "npm", "bower"]
 canonical_url: false
 category: web
 permalink: /in-defense-of-bower/
@@ -60,7 +60,7 @@ Choosing to use npm for all your project dependencies has the merit of eliminati
 
 To proof out a bit of the "npm path" as far as managing front-end dependencies, I threw together a simple and straight-forward comparison project, which you can [find on GitHub](https://github.com/edm00se/bower-vs-npm-dep-compare). It doesn't use gulp or grunt, but rather relies on the `npm run` scripts, defined in the `package.json`. This should help to reduce some of the potential complexity for people just looking to try it out.
 
-Using `npm` for front-end dependency management is about as simple as installing the dependency as you would for any `npm` package, and saving it to your `package.json`. Since these are direct dependencies to be used  by your application, they should be saved to the "dependencies" block, not the "devDependencies" block. This is done via either `npm install --save <package-name>` or `npm i -S <pkg-name>` for those who like abbreviated commands. Once done, the dependencies won't exist in a separate `bower_components` directory, but rather the `node_modules` directory, as anyone with any experience installing packages via `npm` would expect. As far as the file tree goes, this is an equivalent level of things, so to directly use the libs, they must be referenced to (in development) a "level up" above an assumed `app/` or `src/` path inside the main project directory (at an equivalent level); aka- `<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>`.
+Using `npm` for front-end dependency management is about as simple as installing the dependency as you would for any `npm` package, and saving it to your `package.json`. Since these are direct dependencies to be used by your application, they should be saved to the "dependencies" block, not the "devDependencies" block. This is done via either `npm install --save <package-name>` or `npm i -S <pkg-name>` for those who like abbreviated commands. Once done, the dependencies won't exist in a separate `bower_components` directory, but rather the `node_modules` directory, as anyone with any experience installing packages via `npm` would expect. As far as the file tree goes, this is an equivalent level of things, so to directly use the libs, they must be referenced to (in development) a "level up" above an assumed `app/` or `src/` path inside the main project directory (at an equivalent level); aka- `<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>`.
 
 Here's the thing, _if you're like many developers out there_, thats' exactly how the folder tree would match up with your `bower_components` relative path. For those of us that work on rather specific/proprietary application stacks, we may have gotten sloppy at some point in the past and, instead of doing it this way, relying on _something_ (a task runner or build/dev pipeline of _some_ sort) to copy or build the dependencies into the production (aka- `dist/`) path for non-development use, there may be some people out there configuring their installation path to something else. In fact, it might look a lot like [an edit to the `.bowerrc` file](https://github.com/edm00se/AnAppOfIceAndFire/blob/master/.bowerrc), in which a person can specify a different destination/install directory from the `bower_components` default. This is also why many people out there may not see the obvious disconnect between bower and npm for front-end dependency management, as this alternate install path can make things pretty analogous to an automated method by which to install packages. The example I linked to can/does run on a server (Domino server with the XPages runtime) that allows for full concatenation and minification of client-side assets, so doing it this way doesn't make much of a difference. Doing it this way means that you can just pull in any asset by the usual `lib/some.js` approach and continue with your development without any hassle.
 

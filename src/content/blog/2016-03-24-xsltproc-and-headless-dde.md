@@ -1,9 +1,9 @@
 ---
-title: 'XSLTProc in the Buff'
-description: 'a modified dora/swiper process for headless dde nsf builds'
+title: "XSLTProc in the Buff"
+description: "a modified dora/swiper process for headless dde nsf builds"
 pubDatetime: 2016-03-24
 published: true
-tags: ['xpages', 'dde', 'xsl', 'grunt', 'jenkins']
+tags: ["xpages", "dde", "xsl", "grunt", "jenkins"]
 canonical_url: false
 category: xpages
 permalink: /xsltproc-and-headless-dde/
@@ -43,11 +43,11 @@ Something Cameron did a great job with, looking back at DORA, was to embrace a d
 
 As best as I can tell, it achieves the following few things:
 
-  - globally installs (if it isn't there already) scripts in the user's home directory (`~/bin`) and the XSL files that will filter the assets (`~/dora`) and adds the script to the user's PATH (for cli access)
-  - installs into the local git repo (`.git/config`) a definition of a filter, called "dxlmetadata" (with tasks of clean and smudge) and sets it as required
-  - adds the XSL files to `xsl/`
-  - sets the [file associations in the `.gitattributes`](https://github.com/camac/dora/blob/master/dora.pl#L132-L159) file to enforce the files to be processed to be handled as text, filtered by "dxlmetadata", and use a consistent LF for the end of line (and consistency during the file's subsequent tracking in git)
-  - also [tells `.gitignore` to not track](https://github.com/camac/dora/blob/master/dora.pl#L121-L130) the files or changes in the `xsl` path, or some of the other files associated with some settings and whatnot
+- globally installs (if it isn't there already) scripts in the user's home directory (`~/bin`) and the XSL files that will filter the assets (`~/dora`) and adds the script to the user's PATH (for cli access)
+- installs into the local git repo (`.git/config`) a definition of a filter, called "dxlmetadata" (with tasks of clean and smudge) and sets it as required
+- adds the XSL files to `xsl/`
+- sets the [file associations in the `.gitattributes`](https://github.com/camac/dora/blob/master/dora.pl#L132-L159) file to enforce the files to be processed to be handled as text, filtered by "dxlmetadata", and use a consistent LF for the end of line (and consistency during the file's subsequent tracking in git)
+- also [tells `.gitignore` to not track](https://github.com/camac/dora/blob/master/dora.pl#L121-L130) the files or changes in the `xsl` path, or some of the other files associated with some settings and whatnot
 
 ### To Replicate The Results
 
@@ -55,7 +55,7 @@ I need to filter the correct files using the appropriate XSL (the `DXLClean.xsl`
 
 #### Proof of Concept
 
-DORA installs the `xsltproc` binary, which is necessary on Windows; on *nix (based) OSes, most come with a copy of it. I installed dora then, in a freshly cloned copy of my app's git repository, I ran the following command (adapted from Cameron's [DORA ReadMe](https://github.com/camac/dora#testing-an-xsl-transformation-stylesheet)):
+DORA installs the `xsltproc` binary, which is necessary on Windows; on \*nix (based) OSes, most come with a copy of it. I installed dora then, in a freshly cloned copy of my app's git repository, I ran the following command (adapted from Cameron's [DORA ReadMe](https://github.com/camac/dora#testing-an-xsl-transformation-stylesheet)):
 
 ```sh
 xsltproc ~/dora/DXLClean.xsl ODP/XPages/SomePage.xsp.metadata
@@ -73,11 +73,11 @@ In reality, I've gone with what I know and created a task runner based solution,
 
 I wrote a `Gruntfile.js` which performs the tasks of:
 
-* checking for the `DXLClean.xsl` filter in the current project path (alternatively, one could not do this, and work out of the DORA installed copy in `~/dora/xsl/DXLClean.xsl`)
-  * if it does not exist, downloads a copy from the raw file in the [GitHub DORA repository](https://github.com/camac/dora/blob/master/xsl/DXLClean.xsl)
-* processes the specified files (`*.metadata`, etc.) into a temp folder
-  * then back to the origin location (processing in-place caused some empty file issues that would fail out; this corrects that behavior)
-  * cleans the temp folder back out
+- checking for the `DXLClean.xsl` filter in the current project path (alternatively, one could not do this, and work out of the DORA installed copy in `~/dora/xsl/DXLClean.xsl`)
+  - if it does not exist, downloads a copy from the raw file in the [GitHub DORA repository](https://github.com/camac/dora/blob/master/xsl/DXLClean.xsl)
+- processes the specified files (`*.metadata`, etc.) into a temp folder
+  - then back to the origin location (processing in-place caused some empty file issues that would fail out; this corrects that behavior)
+  - cleans the temp folder back out
 
 Here's a copy of the `Gruntfile.js`. Note [the file array](https://github.com/camac/dora/blob/master/dora.pl#L133-L159), which I duplicated from the dora project, also note the variable definition of the ODP path; since I can't assume every project has the same ODP name, setting it up front means that my Jenkins task can update the `Gruntfile.js` for correct path, depending on anything from a per-project definition to an environment variable. Here it is:
 

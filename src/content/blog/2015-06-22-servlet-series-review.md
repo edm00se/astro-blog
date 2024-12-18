@@ -1,10 +1,10 @@
 ---
-title: 'The Road Goes Ever On and On'
+title: "The Road Goes Ever On and On"
 description: "a quick recap of the servlet series and projections on what's to come"
 pubDatetime: 2015-06-22
 published: true
 series: xpages-servlets
-tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
+tags: ["xpages", "domino", "javascript", "servlet", "angularjs"]
 category: self-promotion
 permalink: /servlet-series-review/
 redirect_from: /self-promotion/servlet-series-review/

@@ -1,9 +1,9 @@
 ---
-title: 'Scripting Server Upgrades'
-description: 'GitLab running in Docker and the never-ending case for automation'
+title: "Scripting Server Upgrades"
+description: "GitLab running in Docker and the never-ending case for automation"
 pubDatetime: 2016-11-11
 published: true
-tags: ['scm', 'git', 'gitlab', 'docker', 'bash']
+tags: ["scm", "git", "gitlab", "docker", "bash"]
 canonical_url: false
 category: docker
 permalink: /scripting-server-upgrades/

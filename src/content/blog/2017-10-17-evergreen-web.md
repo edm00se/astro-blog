@@ -1,9 +1,9 @@
 ---
-title: 'Go Evergreen'
-description: 'not just for trees anymore'
+title: "Go Evergreen"
+description: "not just for trees anymore"
 pubDatetime: 2017-10-17
 published: true
-tags: ['web', 'browser', 'security', 'standards']
+tags: ["web", "browser", "security", "standards"]
 canonical_url: false
 category: web
 permalink: /evergreen-web/
@@ -15,7 +15,7 @@ redirect_from: /web/evergreen-web/
 On the 17th of October in 2013, Internet Explorer 11 was released from Microsoft. That means that as of today, this popular\* browser is now four years old and, with all respect to it, it really ought to go.
 
 ![Belle chucking Gaston out the door](./images/Out_Gaston.gif)
- *Good day sir. I said good day!*
+_Good day sir. I said good day!_
 
 ### Evergreen Browsers
 

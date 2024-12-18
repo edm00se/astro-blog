@@ -1,9 +1,9 @@
 ---
-title: 'Custom JSON Serialization With GSON'
-description: 'forcibly preventing scientific notation?'
+title: "Custom JSON Serialization With GSON"
+description: "forcibly preventing scientific notation?"
 pubDatetime: 2017-01-23
 published: true
-tags: ['java', 'xpages']
+tags: ["java", "xpages"]
 canonical_url: false
 category: java
 permalink: /custom-json-serialization/

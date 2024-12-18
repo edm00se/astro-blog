@@ -1,10 +1,21 @@
 ---
-title: 'Developer Dog'
-description: 'an Alexa skill for fun and encouragement'
+title: "Developer Dog"
+description: "an Alexa skill for fun and encouragement"
 pubDatetime: 2018-08-07
 published: true
 series: serverless-intro
-tags: ['serverless', 'alexa', 'aws', 'amazon', 'echo', 'javascript', 'node', 'faas', 'skill']
+tags:
+  [
+    "serverless",
+    "alexa",
+    "aws",
+    "amazon",
+    "echo",
+    "javascript",
+    "node",
+    "faas",
+    "skill",
+  ]
 canonical_url: false
 category: serverless
 permalink: /developer-dog-alexa-skill/
@@ -52,9 +63,9 @@ The last thing to happen for this to work is a set of build and deploy steps. Sp
 1. building a zip file (since this is larger than the AWS Lambda in-browser editor will allow to directly edit, with the included dependencies)
 2. uploading the zip file to the AWS Lambda console
 3. configuring the Alexa Skill in Skill Builder for:
-    - utterances
-    - intent(s) to launch
-    - certifications (regarding privacy, etc.)
+   - utterances
+   - intent(s) to launch
+   - certifications (regarding privacy, etc.)
 
 This last topic is a whole bit unto itself, so I'll follow-up next time with a video walkthrough of how to wire it all up.
 

@@ -1,9 +1,9 @@
 ---
-title: 'IoT and Raspberry Pi'
-description: 'and cloud services, and...'
+title: "IoT and Raspberry Pi"
+description: "and cloud services, and..."
 pubDatetime: 2016-05-20
 published: false
-tags: ['node', 'raspberry-pi', 'ibm', 'watson', 'cloud', 'iot']
+tags: ["node", "raspberry-pi", "ibm", "watson", "cloud", "iot"]
 canonical_url: false
 category: iot-pi
 permalink: /iot-and-raspberry-pi/
@@ -18,9 +18,9 @@ In my last post on this blog, I mentioned the variety of other projects of somew
 
 I'm launching a series of mini-projects revolving entirely around the concepts of:
 
-* [Node.js](https://nodejs.org/)
-* [Rasperrby Pi (3)](https://www.raspberrypi.org/)
-* IoT / "smart devices" / cloud services
+- [Node.js](https://nodejs.org/)
+- [Rasperrby Pi (3)](https://www.raspberrypi.org/)
+- IoT / "smart devices" / cloud services
 
 ### Why?
 
@@ -28,7 +28,7 @@ Thanks to spotting a tweet about a giveaway from IBM in relation to their Watson
 
 {% tweetbu "704371556156207104" %}
 
-At the base level, the Raspberry Pi is a great device for IoT application. It runs a true linux distribution (usually a Debian fork made for the Raspberry Pi, called Raspbian) making it immediately familiar to anyone with *nix experience, is greatly, and consistently (across devices), extensible, via their 40-pin GPIO (general purpose input-output) connector, requires low power (a decent phone charger will suffice) to run, runs from a micro-SD card, has USB ports (even more in the recent models), and connects natively to HDMI for convenience (and can use an adapter cable to connect to RCA component). All in all, it's no wonder it's done quite well as a device. I've even [built a couple of projects using them before](https://github.com/samuelclay/Raspberry-Pi-Photo-Frame/pull/6), to great success.
+At the base level, the Raspberry Pi is a great device for IoT application. It runs a true linux distribution (usually a Debian fork made for the Raspberry Pi, called Raspbian) making it immediately familiar to anyone with \*nix experience, is greatly, and consistently (across devices), extensible, via their 40-pin GPIO (general purpose input-output) connector, requires low power (a decent phone charger will suffice) to run, runs from a micro-SD card, has USB ports (even more in the recent models), and connects natively to HDMI for convenience (and can use an adapter cable to connect to RCA component). All in all, it's no wonder it's done quite well as a device. I've even [built a couple of projects using them before](https://github.com/samuelclay/Raspberry-Pi-Photo-Frame/pull/6), to great success.
 
 So, in keeping with the intention behind the giveaway, I'm going to do a few neat things with this new found hardware. I'll start with some basic ones and work my way up to more complex applications.
 

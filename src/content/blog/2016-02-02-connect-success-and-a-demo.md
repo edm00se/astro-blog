@@ -1,9 +1,9 @@
 ---
-title: 'Connect Success'
-description: 'and a demo'
+title: "Connect Success"
+description: "and a demo"
 pubDatetime: 2016-02-02
 published: true
-tags: ['dde', 'scm', 'git', 'node', 'npm', 'structure', 'ibm', 'connect']
+tags: ["dde", "scm", "git", "node", "npm", "structure", "ibm", "connect"]
 canonical_url: false
 category: self-promotion
 permalink: /connect/success-and-a-demo/

@@ -1,10 +1,10 @@
 ---
-title: 'Building a Front-End, pt.2'
-description: 'an app with AngularJS with our RESTful HTTPServlet'
+title: "Building a Front-End, pt.2"
+description: "an app with AngularJS with our RESTful HTTPServlet"
 pubDatetime: 2015-06-17
 published: true
 series: xpages-servlets
-tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
+tags: ["xpages", "domino", "javascript", "servlet", "angularjs"]
 category: xpages-servlets
 permalink: /building-a-front-end-pt2-an-app-with-angular/
 redirect_from: /xpages-servlets/building-a-front-end-pt2-an-app-with-angular/

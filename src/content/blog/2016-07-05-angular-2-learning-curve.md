@@ -3,7 +3,7 @@ title: "Angular 2's Learning Curve"
 description: "don't ignore it, as its gains are pretty amazing"
 pubDatetime: 2016-07-05
 published: true
-tags: ['angular', 'typescript', 'es6', 'es5', 'npm']
+tags: ["angular", "typescript", "es6", "es5", "npm"]
 canonical_url: false
 category: web
 permalink: /angular-2-learning-curve/
@@ -75,15 +75,15 @@ So far as I can tell, a developer who is setting out to learn about "all these t
 
 Here's the road map, more or less, as I see it today.
 
-| Order | Lib/Package                                                   | What                                | Est. Time |
- | -----| ------------------------------------------------------------- | ----------------------------------- | ------------- |
-| 1     | TypeScript                                                    | [Quick Start][1]                    | 10 min |
-| 2     | ES6\*\*\*                                                     | [lukehoban/es6features][5]          | 20 min |
-| 2     | TS tooling (like typings, tsd)                                | Read, try it out, repeat            | 5 min\* |
-| 3     | Package/module bundling (systemjs, webpack, browserify, jspm) | Pick one, hope for the best         | 5 min\* |
-| 4     | Angular 2 (concepts/101)                                      | [The 5-min TS Quick Start][2]       | 5 min\* |
-| 5     | Angular 2 (more in-depth)                                     | [The "Tour of Heroes" tutorial][3]  | 60 min\*\* |
-| 6     | Angular CLI tool (to help scaffold projects)                  | [Angular CLI][4]                    | 10 min |{:.table .table-bordered .table-striped}
+| Order | Lib/Package                                                   | What                               | Est. Time  |
+| ----- | ------------------------------------------------------------- | ---------------------------------- | ---------- | ---------------------------------------- |
+| 1     | TypeScript                                                    | [Quick Start][1]                   | 10 min     |
+| 2     | ES6\*\*\*                                                     | [lukehoban/es6features][5]         | 20 min     |
+| 2     | TS tooling (like typings, tsd)                                | Read, try it out, repeat           | 5 min\*    |
+| 3     | Package/module bundling (systemjs, webpack, browserify, jspm) | Pick one, hope for the best        | 5 min\*    |
+| 4     | Angular 2 (concepts/101)                                      | [The 5-min TS Quick Start][2]      | 5 min\*    |
+| 5     | Angular 2 (more in-depth)                                     | [The "Tour of Heroes" tutorial][3] | 60 min\*\* |
+| 6     | Angular CLI tool (to help scaffold projects)                  | [Angular CLI][4]                   | 10 min     | {:.table .table-bordered .table-striped} |
 
 \* Note: my time estimates are for the linked quick starts, tutorials, or reading and basic comprehension. I've no expectation of becoming a master in any of these subjects of tooling any time too quickly.
 

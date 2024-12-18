@@ -1,9 +1,9 @@
 ---
-title: 'A Quick Talk'
-description: 'about chalk talks'
+title: "A Quick Talk"
+description: "about chalk talks"
 pubDatetime: 2015-01-12
 published: true
-tags: ['xpages', 'domino', 'ibm', 'ibmconnected2015']
+tags: ["xpages", "domino", "ibm", "ibmconnected2015"]
 category: self-promotion
 permalink: /a-chalk-talk-talk/
 redirect_from: /self-promotion/a-chalk-talk-talk/

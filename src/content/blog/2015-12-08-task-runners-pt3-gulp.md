@@ -1,10 +1,10 @@
 ---
-title: 'Task Runners pt.3: Gulp'
-description: 'quite refreshing'
+title: "Task Runners pt.3: Gulp"
+description: "quite refreshing"
 pubDatetime: 2015-12-08
 published: true
 series: task-runners-with-domino
-tags: ['grunt', 'gulp', 'git', 'scm', 'static', 'generator']
+tags: ["grunt", "gulp", "git", "scm", "static", "generator"]
 canonical_url: false
 category: web
 permalink: /task-runners-pt3-gulp/
@@ -44,10 +44,10 @@ As before, I'll focus mostly on the jshint plugin for demonstrative purposes, th
 
 Here's a barebones followed by a basic implementation.
 
-``` javascript
-var gulp = require('gulp');
+```javascript
+var gulp = require("gulp");
 
-gulp.task('default', ['someTask', 'anotherTask']);
+gulp.task("default", ["someTask", "anotherTask"]);
 ```
 
 That level of simplicity after the `Gruntfile.js` business was something I found quite refreshing (sorry, I had to work it in somehow). To get started with gulp and jshint, we need to install jshint to be available as a plugin, again via npm with `npm install gulp-jshint --save-dev`. My basic example includes [gulp-util](https://github.com/gulpjs/gulp-util), which is an excellent package to help with interacting with plugins and the console's output; you'll need to either install that with `npm install gulp-util --save-dev` or ignore it (and remove its corresponding require line).
@@ -78,14 +78,14 @@ Note: I took the default formatting for jshint in both Grunt and gulp, which is 
 
 Where this is all headed is something I'll get into soon. To round out the picture, I want to:
 
-* check my client-side code (jshint)
-* uglify/minify and join (concatenate) my front-end JS assets (vendor libraries then custom app content)
-* minify and join (concatenate) my CSS files
-* minify / collapse white space on HTML files
-* document my code
-* provide the the above as the "build" of my app to the published application
-  * keeping the "source" separate from the production app
-  * after having tested the app to make sure it didn't break on its way to production
+- check my client-side code (jshint)
+- uglify/minify and join (concatenate) my front-end JS assets (vendor libraries then custom app content)
+- minify and join (concatenate) my CSS files
+- minify / collapse white space on HTML files
+- document my code
+- provide the the above as the "build" of my app to the published application
+  - keeping the "source" separate from the production app
+  - after having tested the app to make sure it didn't break on its way to production
 
 Where there are gaps, there will be more coming soon.
 

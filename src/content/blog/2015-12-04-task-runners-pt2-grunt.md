@@ -1,10 +1,10 @@
 ---
-title: 'Task Runners pt.2: Grunt'
-description: 'the noise we make running some tough tasks manually'
+title: "Task Runners pt.2: Grunt"
+description: "the noise we make running some tough tasks manually"
 pubDatetime: 2015-12-04
 published: true
 series: task-runners-with-domino
-tags: ['grunt', 'gulp', 'git', 'scm', 'static', 'generator']
+tags: ["grunt", "gulp", "git", "scm", "static", "generator"]
 canonical_url: false
 category: web
 permalink: /task-runners-pt2-grunt/
@@ -48,11 +48,11 @@ You can see that this can quite powerful rather quickly. Any tasks that we we wa
 
 It's easier to keep your static web assets in `WebContent/` in corresponding paths for images, stylesheets, etc., but with some careful configuration, you can work with the "normal" Domino Designer resource paths in the ODP. Those corresponding paths are:
 
-Resource     | Path
------- | -----------
-Images   | `NSF/Resources/assets/images/`
-Style Sheets | `NSF/Resources/StyleSheets/`
-JavaScript   | `NSF/Code/ScriptLibraries/`
+| Resource     | Path                           |
+| ------------ | ------------------------------ |
+| Images       | `NSF/Resources/assets/images/` |
+| Style Sheets | `NSF/Resources/StyleSheets/`   |
+| JavaScript   | `NSF/Code/ScriptLibraries/`    |
 
 Note: for the JavaScript files, be careful to only specify those JS scripts that end in `.js` and avoid any that end with `.jss` as the latter are SSJS libraries. You _can_ run operations against those files, but I'm not going to cover the details and nuances of doing so here (aka- you can have at it, but it's not something I'm focusing on, as they're server-side assets).
 
@@ -69,10 +69,10 @@ You can define additional tasks to cover different use cases; one you may see co
 A `Gruntfile.js` is a JavaScript file. It starts with the following:
 
 ```javascript
-module.exports = function(grunt) {
-	// all content in this module export block
-	// which injects grunt as a passed object
-}
+module.exports = function (grunt) {
+  // all content in this module export block
+  // which injects grunt as a passed object
+};
 ```
 
 Now, inside our module export function, we invoke `initConfig` on the grunt handle and pass it an object defining our tasks by name and their respective configuration object.
@@ -80,12 +80,11 @@ Now, inside our module export function, we invoke `initConfig` on the grunt hand
 ```javascript
 //...
 grunt.initConfig({
-	// configure the object passed back with task definitions
+  // configure the object passed back with task definitions
 
-	taskName: {
-		// config object for the task
-	}
-
+  taskName: {
+    // config object for the task
+  },
 });
 //...
 ```
@@ -93,13 +92,16 @@ grunt.initConfig({
 Now we need to register the npm module (the tasks we're using that are development dependencies in our `package.json`) so it can be available as a task. The names correlate, so if you're using a grunt plugin for the first time, make sure to check the readme, which should tell you to install the plugin (`npm install some-package --save-dev`, the last flag saves it to your `package.json`) and then do the appropriate `loadNpmTasks` with documentation on how to configure the task. Here's an example `loadNpmTasks` call:
 
 ```javascript
-grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.loadNpmTasks("grunt-contrib-jshint");
 ```
 
 Lastly, we register the custom tasks so we can access them from the command line (or the 'default' for the generic `grunt` call). From the below example, `grunt` invokes 'default', but running `grunt jshint` will work, running the configured 'jshint' task only. Think of this block as a custom defined superset of tasks.
 
 ```javascript
-grunt.registerTask('default', ['jshint','other tasks you want to include in the default']);
+grunt.registerTask("default", [
+  "jshint",
+  "other tasks you want to include in the default",
+]);
 ```
 
 Here's how it looks all together for a basic structure (just count to 5):
@@ -110,19 +112,19 @@ Here's how it looks all together for a basic structure (just count to 5):
 
 So, hopefully by now your mind is awash with thoughts like:
 
-* what can I plug into this?
-* what _can't_ I plug in?
-* what should / shouldn't I use in this process?
-* how many different tasks should I include?
-* how does one grow such a fine and manly beard?
+- what can I plug into this?
+- what _can't_ I plug in?
+- what should / shouldn't I use in this process?
+- how many different tasks should I include?
+- how does one grow such a fine and manly beard?
 
 Obviously I can't help you with that last one, but my recommendation, as with any new tool, is to start small with what you know, broaden your knowledge of available plugins, and expand from there. As far as I can tell, the tasks we can run with these runners are in one of the following flavors:
 
-* assistive tasks to warn (JSHint, for instance) of human error in coding
-* automate build tasks (minification/uglification of JS, minification of CSS, HTML white space collapsing)
-* automate testing
-* automate documentation
-* automate miscellaneous other tasks
+- assistive tasks to warn (JSHint, for instance) of human error in coding
+- automate build tasks (minification/uglification of JS, minification of CSS, HTML white space collapsing)
+- automate testing
+- automate documentation
+- automate miscellaneous other tasks
 
 The possibilities are endless.
 
@@ -181,17 +183,17 @@ There are two plugins worthy of mention. First is the [`live-reload`](https://li
 
 Both of these have grunt plugins, making things a little easier.
 
-* [grunt-contrib-livereload](https://github.com/gruntjs/grunt-contrib-livereload)
-* [grunt-browser-sync](https://github.com/BrowserSync/grunt-browser-sync)
+- [grunt-contrib-livereload](https://github.com/gruntjs/grunt-contrib-livereload)
+- [grunt-browser-sync](https://github.com/BrowserSync/grunt-browser-sync)
 
 I'm also rather impressed with the level of documentation for browser-sync's plugins [for Grunt](https://www.browsersync.io/docs/grunt/) and [gulp](https://www.browsersync.io/docs/gulp/). Good documentation should never be under-appreciated. Why use browser-sync?
 
-* it's easy to install and use
-* can be used with a task runner or stand-alone
-* gives us not just a simple server with sync capabilities for development and testing, but also can proxy other hosts
-* syncs browser events across devices (all connected devices), via web sockets
-* has a well polished UI for managing the instance and connected devices
-* even has remote JS console debugging capabilities (awesome!), and yes, that works on things like Apple iDevices
+- it's easy to install and use
+- can be used with a task runner or stand-alone
+- gives us not just a simple server with sync capabilities for development and testing, but also can proxy other hosts
+- syncs browser events across devices (all connected devices), via web sockets
+- has a well polished UI for managing the instance and connected devices
+- even has remote JS console debugging capabilities (awesome!), and yes, that works on things like Apple iDevices
 
 Side note: for a stand-alone demo, install it via `npm install -g browser-sync` and then start up your proxy to a live and accessible site. It can be internal to your firewall or local to your host OS, provided all devices attempting to connect have visibility), then use the specified port to connect a device and the second specified port to connect to the management UI (they auto assign ports in the event 3000 or 3001 are taken. Example stand-alone command: `browser-sync start --proxy stackoverflow.com` (something like google.com performs redirects to prevent reverse proxying their site directly). Trust me, you'll like this if you haven't seen it yet ð.
 
@@ -224,7 +226,7 @@ What I ran into was that either the `json-server` instance wouldn't start correc
 I initially intended to walk through every bit of my configuration, but instead I'll leave you with a (very brief) animated gif and [a link to my full `Gruntfile.js`](https://gist.githubusercontent.com/edm00se/43fcb3fcac536267440d/raw/89dfc045561d8936b30beaf8b4137ebc54e5a466/Gruntfile.js). Here it is all starting to come together:
 
 ![jshint throwing warnings and watching file saves while reloading the browser on save events](./images/task-runners/watchAndJsHintBrowserSync.gif)
-*jshint throwing warnings and watching file saves*
+_jshint throwing warnings and watching file saves_
 
 ### In Summary
 

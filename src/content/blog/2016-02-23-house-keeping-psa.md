@@ -1,9 +1,9 @@
 ---
-title: 'House Keeping'
-description: 'a public service announcement'
+title: "House Keeping"
+description: "a public service announcement"
 pubDatetime: 2016-02-23
 published: true
-tags: ['site', 'admin', 'nifty']
+tags: ["site", "admin", "nifty"]
 canonical_url: false
 category: admin
 permalink: /house-keeping-psa/
@@ -25,7 +25,7 @@ In speaking with someone recently, it was brought up that there were features to
 Right there, with the "hamburger" icon. You can find links to the series pages, categories I've posted in, and the tags I've tagged each of my posts with, for correlating related posts.
 
 ![mmm... hamburgers](./images/blog_psa/blogMenu.png){.skinny}
-*mmm... hamburgers*
+_mmm... hamburgers_
 
 ### Search
 

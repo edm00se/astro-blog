@@ -1,9 +1,9 @@
 ---
-title: 'Speed Up Your Applications With Nginx and PageSpeed'
+title: "Speed Up Your Applications With Nginx and PageSpeed"
 description: "my session at MWLUG 2015"
 pubDatetime: 2015-08-04
 published: true
-tags: ['mwlug', 'structure', 'mvc', 'rest', 'xpages']
+tags: ["mwlug", "structure", "mvc", "rest", "xpages"]
 category: self-promotion
 permalink: /my-mwlug-2015-session/
 redirect_from: /self-promotion/my-mwlug-2015-session/
@@ -25,10 +25,10 @@ The title of my session is "Speed Up Your Applications With Nginx and PageSpeed"
 
 I've been <s>accused</s> called out for [having an "admin-y" sounding session](https://www.youtube.com/watch?v=dAN1iGaOv2s&t=8m27s), but I guarantee a couple things:
 
-* I'm a developer
-* I only pretend to know admin-y things (to serve my development purposes)
-* I'll try not to bore you with installs and CLI commands that you can read from standard documentation
-* we can still respect each other as developers after my session is done ð (it's about better applications)
+- I'm a developer
+- I only pretend to know admin-y things (to serve my development purposes)
+- I'll try not to bore you with installs and CLI commands that you can read from standard documentation
+- we can still respect each other as developers after my session is done ð (it's about better applications)
 
 ### When
 
@@ -38,10 +38,10 @@ My session, AD113: Speed Up Your Applications With Nginx and PageSpeed, will be 
 
 One of the more popular web server technologies in recent history is Nginx, an open source reverse proxy and web server. Built to be lightning fast, Nginx when combined with Google's PageSpeed module can allow for even faster configuration and every user knows that faster applications are better. Covering the key topics of:
 
-* basic build, install, and configuration of Nginx and PageSpeed module
-* demonstration of use with caching of static assets
-* configuration of the PageSpeed components
-* show how to hand off SSL/TLS credentials
+- basic build, install, and configuration of Nginx and PageSpeed module
+- demonstration of use with caching of static assets
+- configuration of the PageSpeed components
+- show how to hand off SSL/TLS credentials
 
 ### Summary
 

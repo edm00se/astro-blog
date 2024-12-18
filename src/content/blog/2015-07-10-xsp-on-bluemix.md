@@ -1,9 +1,9 @@
 ---
-title: 'XPages Comes to Bluemix'
+title: "XPages Comes to Bluemix"
 description: "901v00_13 is the ExtLib we've been looking for"
 pubDatetime: 2015-07-10
 published: true
-tags: ['xpages', 'domino', 'ibm', 'bluemix']
+tags: ["xpages", "domino", "ibm", "bluemix"]
 category: bluemix
 permalink: /xsp-on-bluemix/
 redirect_from: /bluemix/xsp-on-bluemix/

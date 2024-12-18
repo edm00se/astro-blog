@@ -1,9 +1,9 @@
 ---
-title: 'Notes in 9: Nginx + PageSpeed'
-description: 'highlights from my MWLUG session'
+title: "Notes in 9: Nginx + PageSpeed"
+description: "highlights from my MWLUG session"
 pubDatetime: 2015-12-04
 published: true
-tags: ['mwlug', 'nginx', 'xpags', 'ni9']
+tags: ["mwlug", "nginx", "xpags", "ni9"]
 canonical_url: false
 category: self-promotion
 permalink: /ni9-nginx-pagespeed-highlights-from-mwlug/

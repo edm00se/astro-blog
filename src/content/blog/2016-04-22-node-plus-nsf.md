@@ -1,9 +1,9 @@
 ---
-title: 'Using Node to Connect to a Notes/Domino NSF'
-description: 'we might as well get Domino in on the fun'
+title: "Using Node to Connect to a Notes/Domino NSF"
+description: "we might as well get Domino in on the fun"
 pubDatetime: 2016-04-22
 published: true
-tags: ['node', 'express', 'iseries', 'jdbc', 'jt400', 'notes', 'domino', 'nsf']
+tags: ["node", "express", "iseries", "jdbc", "jt400", "notes", "domino", "nsf"]
 series: node-express-iseries-nsf
 canonical_url: false
 category: node
@@ -26,9 +26,9 @@ I had previously created [an example Node+Express application](https://github.co
 
 The best part about this example though, is that it is so consistent with the other implementations, that you can simply [compare the iseries branch to the domino branch](https://github.com/edm00se/express-app-fun/compare/iseries...domino?w=1) or the [compare the master branch to the domino branch](https://github.com/edm00se/express-app-fun/compare/master...domino?w=1). If you check those links, which go to the comparison screen for the specified branches (I added the `?w=1` query parameter, which tells it to ignore whitespace differences), you can see that once again, the only things that changed (aside from the ReadMe) are:
 
-* the `config/db.js` with the db config specifics
-* the `util` module, which defines different methods for handling, but exposes them nearly identically
-* the `routes` module, which adapts to the slightly different implementation from the `util` methods
+- the `config/db.js` with the db config specifics
+- the `util` module, which defines different methods for handling, but exposes them nearly identically
+- the `routes` module, which adapts to the slightly different implementation from the `util` methods
 
 ### Specifics With `domino-nsf` and Notes/Domino NSF
 
@@ -54,10 +54,10 @@ Once again, I'm using a common defined session open and close function (instead 
 
 Just the same as last time, now that my connections are configured and my data handling is provisioned, all I need to do is invoke it in my various `routes`. As you can see from my data `util` module, the exposed `query` method is simple enough to use:
 
-* `require` the module
-* call the `getView` or `getDoc` method (you can see how a `saveDoc` would work here)
-* passing in the parameter (View name, UNID string) and
-* a function, which has two parameters, error or data
+- `require` the module
+- call the `getView` or `getDoc` method (you can see how a `saveDoc` would work here)
+- passing in the parameter (View name, UNID string) and
+- a function, which has two parameters, error or data
 
 {% gist "edm00se", "ef66a551a04cae3378b42215f3449f03", "d-routes_beers.js" %}
 
@@ -69,7 +69,7 @@ You can find my source code for this version of the project, in full, in [the sa
 
 ### Summary
 
-All in all, I tried not to repeat myself from the last post, but as you can see, there is a high degree of similarity. As I mentioned, the `domino-nsf` package is likely to go through a round of changes, but that shouldn't stop you from trying anything out or contributing to the project; either in the #dominonodejs channel of the OpenNTF Slack chat or on GitHub. In fact, Nils Tarjei Hjelme has an open issue regarding the build scripts for both Windows 64-bit and for Linux/*nix environments (he's already building the 32-bit one, which I've tested). Not being a C dev, it's a bit beyond my immediate skill set, but if someone out there is knowledgable, @nthjelme has [marked that issue as "help wanted"](https://github.com/nthjelme/nodejs-domino/issues/2) so he's looking for assistance.
+All in all, I tried not to repeat myself from the last post, but as you can see, there is a high degree of similarity. As I mentioned, the `domino-nsf` package is likely to go through a round of changes, but that shouldn't stop you from trying anything out or contributing to the project; either in the #dominonodejs channel of the OpenNTF Slack chat or on GitHub. In fact, Nils Tarjei Hjelme has an open issue regarding the build scripts for both Windows 64-bit and for Linux/\*nix environments (he's already building the 32-bit one, which I've tested). Not being a C dev, it's a bit beyond my immediate skill set, but if someone out there is knowledgable, @nthjelme has [marked that issue as "help wanted"](https://github.com/nthjelme/nodejs-domino/issues/2) so he's looking for assistance.
 
 For those who find this to be a good topic, please contribute or at least show your interest, as it's always great to contribute to an open source project you care about and show support for it.
 

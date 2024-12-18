@@ -1,9 +1,9 @@
 ---
-title: 'Notes in 9: Docker + SonarQube'
-description: 'an intro to two great topics'
+title: "Notes in 9: Docker + SonarQube"
+description: "an intro to two great topics"
 pubDatetime: 2016-02-24
 published: true
-tags: ['scm', 'git', 'xpages', 'ni9', 'docker']
+tags: ["scm", "git", "xpages", "ni9", "docker"]
 canonical_url: false
 category: self-promotion
 permalink: /docker-plus-sonarqube/

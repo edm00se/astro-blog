@@ -1,10 +1,10 @@
 ---
-title: 'Rebirth: An App of Ice and Fire'
-description: 'refactoring the build process to better the app'
+title: "Rebirth: An App of Ice and Fire"
+description: "refactoring the build process to better the app"
 pubDatetime: 2016-12-14
 published: true
 series: servlet-series
-tags: ['scm', 'git', 'npm', 'gulp']
+tags: ["scm", "git", "npm", "gulp"]
 canonical_url: false
 category: xpages
 permalink: /rebirth-an-app-of-ice-and-fire/
@@ -20,7 +20,7 @@ If you read my blog for any of the [Saga of Servlets](https://edm00se.io/servlet
 When my App of Ice and Fire (viewable here: [iceandfire.mybluemix.net](https://iceandfire.mybluemix.net) on Bluemix) was last left off, it had an [Angular 1.x](https://angularjs.org/) application as the front-end, with a [gulp](https://gulpjs.com/) driven build process to optimize all the front-end assets, and was backed by some excellent servlets (extending `DesignerFacesServlet`) which were talking points for the previous entries in the series, which focused more on general premise of servlet construction and application structure with XPages and Domino. Sadly, the application was left to sit for several months, which was approaching the better part of a year now. During this time, several new frameworks came out; specifically the release and popularity of [React](https://facebook.github.io/react/), [Angular 2](https://angular.io/)'s release, and my current favorite, [vue.js](https://vuejs.org/), not only started gaining popularity, but hit its version 2.0 as well. Additionally, I got on the bandwagon of switching to using npm scripts as the primary build pipeline; an approach that makes the dependencies, builds, and build-related actions all rather self-contained and neat. In other words, it was time for something new.
 
 [![Hyrkoon the Hero, with Lightbringer in hand](./images/Hykroon_Lightbringer.jpg)
-*Hyrkoon the Hero, with Lightbringer in hand*](https://awoiaf.westeros.org/index.php/Lightbringer)
+_Hyrkoon the Hero, with Lightbringer in hand_](https://awoiaf.westeros.org/index.php/Lightbringer)
 
 ### [What's New](https://github.com/edm00se/AnAppOfIceAndFire/releases/tag/v1.0.0)
 

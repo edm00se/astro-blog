@@ -1,9 +1,9 @@
 ---
-title: 'Eric and the Quest for More Coffee'
-description: 'replacing my trusty coffee mug'
+title: "Eric and the Quest for More Coffee"
+description: "replacing my trusty coffee mug"
 pubDatetime: 2016-07-07
 published: true
-tags: ['coffee', 'mug', 'desk']
+tags: ["coffee", "mug", "desk"]
 canonical_url: false
 category: aside
 permalink: /replacement-coffee-mug/

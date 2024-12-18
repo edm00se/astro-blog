@@ -1,9 +1,9 @@
 ---
 title: "Manually Renewing HTTPS w/ Let's Encrypt"
-description: 'made a little easier, for a Node app on Bluemix'
+description: "made a little easier, for a Node app on Bluemix"
 pubDatetime: 2016-07-27
 published: true
-tags: ['ibm', 'bluemix', 'node', 'https', 'lets-encrypt']
+tags: ["ibm", "bluemix", "node", "https", "lets-encrypt"]
 canonical_url: false
 category: self-promotion
 permalink: /manual-lets-encrypt-renewal-made-easier/

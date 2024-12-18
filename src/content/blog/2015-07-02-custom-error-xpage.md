@@ -1,9 +1,9 @@
 ---
-title: 'Prettify Your Error Code'
-description: 'adding style to a custom error XPage'
+title: "Prettify Your Error Code"
+description: "adding style to a custom error XPage"
 pubDatetime: 2015-07-02
 published: true
-tags: ['xpages', 'domino', 'javascript']
+tags: ["xpages", "domino", "javascript"]
 category: xpages
 permalink: /custom-error-xpage/
 redirect_from: /xpages/custom-error-xpage/

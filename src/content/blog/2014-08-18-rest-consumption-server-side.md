@@ -1,9 +1,9 @@
 ---
-title: 'REST Consumption in Java on Domino'
+title: "REST Consumption in Java on Domino"
 pubDatetime: 2014-08-18
 published: true
-tags: ['xpages', 'domino', 'java', 'rest']
-description: 'consuming data on the server to lighten the client load'
+tags: ["xpages", "domino", "java", "rest"]
+description: "consuming data on the server to lighten the client load"
 category: xpages
 permalink: /rest-consumption-server-side/
 redirect_from: /xpages/rest-consumption-server-side/

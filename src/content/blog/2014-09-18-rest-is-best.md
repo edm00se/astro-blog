@@ -1,9 +1,9 @@
 ---
-title: 'REST is Best'
-description: 'stateless transport vs AJAX'
+title: "REST is Best"
+description: "stateless transport vs AJAX"
 pubDatetime: 2014-09-18
 published: true
-tags: ['xpages', 'domino', 'javascript', 'rest', 'ajax']
+tags: ["xpages", "domino", "javascript", "rest", "ajax"]
 category: xpages
 permalink: /rest-is-best/
 redirect_from: /xpages/rest-is-best/

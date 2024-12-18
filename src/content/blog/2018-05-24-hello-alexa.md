@@ -1,10 +1,21 @@
 ---
-title: 'Hello Alexa'
-description: 'an intro to serverless and Alexa skills'
+title: "Hello Alexa"
+description: "an intro to serverless and Alexa skills"
 pubDatetime: 2018-05-24
 published: true
 series: serverless-intro
-tags: ['serverless', 'alexa', 'aws', 'amazon', 'echo', 'javascript', 'node', 'faas', 'skill']
+tags:
+  [
+    "serverless",
+    "alexa",
+    "aws",
+    "amazon",
+    "echo",
+    "javascript",
+    "node",
+    "faas",
+    "skill",
+  ]
 canonical_url: false
 category: serverless
 permalink: /serverless-hellow-alexa/
@@ -59,17 +70,17 @@ Stop me if you've heard this before, but we'll begin with a good ol' "hello worl
 ##### Scaffold The Project
 
 1. this is a Node.js example, so we'll be creating a new project directory and initializing with npm
-    - `mkdir hello-world`
-    - `cd hello-world`
-    - `npm init -y`
+   - `mkdir hello-world`
+   - `cd hello-world`
+   - `npm init -y`
 2. we'll use the official [Alexa Skills Kit SDK for Node.js][alexa-sdk-node]
-    - `npm install --save alexa-sdk`
+   - `npm install --save alexa-sdk`
 3. we'll have a short and sweet Node.js module, so create the source file
-    - `touch index.js`
+   - `touch index.js`
 4. massage your `package.json`, update your:
-    - name
-    - description
-    - ensure the "main" points to `index.js` (that should be the default)
+   - name
+   - description
+   - ensure the "main" points to `index.js` (that should be the default)
 
 ##### Build Out `index.js`
 

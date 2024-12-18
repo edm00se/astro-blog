@@ -1,13 +1,13 @@
 ---
-title: 'Change is in the Air'
-description: 'Summer, ThatConf, Open Source, and Work'
+title: "Change is in the Air"
+description: "Summer, ThatConf, Open Source, and Work"
 pubDatetime: 2017-09-01
 published: true
 tags:
-    - open-source
-    - conference
-    - summer
-    - day-job
+  - open-source
+  - conference
+  - summer
+  - day-job
 canonical_url: false
 category: self-promotion
 permalink: /change-is-in-the-air/

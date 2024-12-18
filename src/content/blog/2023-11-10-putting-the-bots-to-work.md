@@ -17,6 +17,7 @@ category: ai
 toc: true
 permalink: /putting-the-bots-to-work/
 ---
+
 Happy November everybody! I made it through October and in spite of some of the doom and gloom to come in this one, I still had _some_ fun in moderating my usual contributing open source repository to Hacktoberfest.
 
 ### Hacktoberfest 2023 and Lessons Learned
@@ -53,11 +54,9 @@ The wiring up of the GitHub Action via its workflow YAML was also quite straight
 
 {% gist "edm00se", "7e03ec794c947f58ec376b38920632ab", "1b_openai_config.yml" %}
 
-
 After my follow up to allow for the label to override the failing check when present.
 
 {% gist "edm00se", "7e03ec794c947f58ec376b38920632ab", "1c_openai_updated_script_snippet.js" %}
-
 
 ##### The Other Thing
 

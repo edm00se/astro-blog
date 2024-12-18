@@ -1,9 +1,9 @@
 ---
-title: 'Proxying Parcel'
-description: 'super-powered front-end development'
+title: "Proxying Parcel"
+description: "super-powered front-end development"
 pubDatetime: 2019-01-14
 published: true
-tags: ['parcel', 'proxy', 'tomcat', 'domino', 'tooling', 'web', 'development']
+tags: ["parcel", "proxy", "tomcat", "domino", "tooling", "web", "development"]
 canonical_url: false
 category: web
 permalink: /proxying-parcel/
@@ -32,10 +32,10 @@ As for why I should load express as a development dependency, that wouldn't be t
 
 [Bundlephobia.com][bundlephobia] reports the following sizes for these two dependencies:
 
-| Package                                  | Size      |
-|------------------------------------------|-----------|
-| [express(4.16.4)][bundle-express]        | 386.2 kB  |
-| [http-proxy(1.17.0)][bundle-http-proxy]  | 20.7 kB   |
+| Package                                 | Size     |
+| --------------------------------------- | -------- |
+| [express(4.16.4)][bundle-express]       | 386.2 kB |
+| [http-proxy(1.17.0)][bundle-http-proxy] | 20.7 kB  |
 
 As you can see, as a dev dependency, this should be under a tenth of the size. As for why to use `http-proxy`? It's what powers `http-proxy-middleware`, which is meant to plug into a wide variety of other server libraries. It also means that it has a fairly universal API.
 

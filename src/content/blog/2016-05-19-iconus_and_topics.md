@@ -1,9 +1,21 @@
 ---
-title: 'ICONUS and Other Topics'
-description: 'keeping busy'
+title: "ICONUS and Other Topics"
+description: "keeping busy"
 pubDatetime: 2016-05-19
 published: true
-tags: ['iconus', 'structure', 'front-end', 'back-end', 'xpages-servlets', 'scm', 'yeoman', 'grunt', 'rest', 'angularjs']
+tags:
+  [
+    "iconus",
+    "structure",
+    "front-end",
+    "back-end",
+    "xpages-servlets",
+    "scm",
+    "yeoman",
+    "grunt",
+    "rest",
+    "angularjs",
+  ]
 canonical_url: false
 category: self-promotion
 permalink: /iconus_and_topics/
@@ -22,22 +34,22 @@ Why a title of "Normalizing XPages Web Development"? By developing consistently 
 
 [The session itself](https://www.idonotes.com/idonotes/idonotes.nsf/dx/normalizing-xpages-web-development.htm) and included demonstrations of:
 
-* modern web app frameworks for Domino/XPages
-  * our demo app made use of an AngularJS front-end
-  * this front-end consumed JSON APIs (REST-like) from XPages
-* more "traditional" XPages implementations of RESTful APIs with JSON
-  * `xe:restService` implementations of `xe:customRestService` in SSJS, `xe:viewItemFileService`, and even an `xe:documentJsonService` snuck in there (it gets used as a fail-over from DDS, if you're using local web preview)
-  * these were all implemented in a single `api.xsp` XPage, which is both familiar and convenient, without any of the "fiddling" of a `DesignerFacesServlet` that may put people off (this was covered in the session and slides)
-  * updating via a LotusScript agent was demonstrated (for those "stuck" between a rock and a quarry)
-  * and Domino Data Services made an appearance (though you should really take the full implementation into consideration before exposing full, direct CRUD operations to anyone with ACL access, or facing it externally)
-* task runner implementation was demonstrated (via [Grunt](https://gruntjs.com/)) for optimized client-side assets
-  * minified HTML, CSS, and JS
-  * concatenated HTML partials (converted to templates within JS scripts)
-  * uglified JS
-  * client-side libraries installed and managed via [bower](https://bower.io/)
-  * concatenated and minified libraries (Bootstrap, Angular)
-  * images (if any) optimized
-* scaffolding the front-end app with [Yeoman](https://yeoman.io/) and the [generator-angular](https://github.com/yeoman/generator-angular) generator to stand up a front-end app quickly
+- modern web app frameworks for Domino/XPages
+  - our demo app made use of an AngularJS front-end
+  - this front-end consumed JSON APIs (REST-like) from XPages
+- more "traditional" XPages implementations of RESTful APIs with JSON
+  - `xe:restService` implementations of `xe:customRestService` in SSJS, `xe:viewItemFileService`, and even an `xe:documentJsonService` snuck in there (it gets used as a fail-over from DDS, if you're using local web preview)
+  - these were all implemented in a single `api.xsp` XPage, which is both familiar and convenient, without any of the "fiddling" of a `DesignerFacesServlet` that may put people off (this was covered in the session and slides)
+  - updating via a LotusScript agent was demonstrated (for those "stuck" between a rock and a quarry)
+  - and Domino Data Services made an appearance (though you should really take the full implementation into consideration before exposing full, direct CRUD operations to anyone with ACL access, or facing it externally)
+- task runner implementation was demonstrated (via [Grunt](https://gruntjs.com/)) for optimized client-side assets
+  - minified HTML, CSS, and JS
+  - concatenated HTML partials (converted to templates within JS scripts)
+  - uglified JS
+  - client-side libraries installed and managed via [bower](https://bower.io/)
+  - concatenated and minified libraries (Bootstrap, Angular)
+  - images (if any) optimized
+- scaffolding the front-end app with [Yeoman](https://yeoman.io/) and the [generator-angular](https://github.com/yeoman/generator-angular) generator to stand up a front-end app quickly
 
 With an agenda like that and a only one hour to cover it all in, I'm really glad Shean had my back with a lot of the back-end topics and slide coverage. Another obstacle we overcame was my travel complication, which ended with me camping out with my laptop in a Starbucks in rural, eastern Ohio. I'm sorry the audio was fairly junky, but I hope it was still clear enough to understand and worthy of listening to.
 

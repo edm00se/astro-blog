@@ -1,9 +1,9 @@
 ---
-title: 'A Quick Note on JARs'
-description: 'I learn something new every day'
+title: "A Quick Note on JARs"
+description: "I learn something new every day"
 pubDatetime: 2015-02-09
 published: true
-tags: ['xpages', 'domino', 'java']
+tags: ["xpages", "domino", "java"]
 category: xpages
 permalink: /a-quick-note-on-JARs/
 redirect_from: /xpages/a-quick-note-on-JARs/
@@ -33,7 +33,7 @@ grant { permission java.security.AllPermission; }
 
 To rule out what I have going in my primarily development environment (something that doesn't come up for me as a staff employee of an IBM customer, as my environment doesn't change, unless I add a picture of my kid to my desk), I created a fresh install of Notes/Domino Designer. I took a look at the `<install>/jvm/lib/security/java.policy` file and noticed something that works to our advantage as developers.
 
-![we can put our JARs in the &lt;install&gt;jvm/lib/ext folder](./images/JARs/StockJvmPropertiesJvmLibExt.png)
+![we can put our JARs in the <install>jvm/lib/ext folder](./images/JARs/StockJvmPropertiesJvmLibExt.png)
 
 So, without the need to edit the java.policy file, this makes things a much easier sell to your admins (even though I recommend just buying them their beverage of choice ðº), as adding an industry accepted library to your server stack has a whole different tone than potentially scaring them with words like "grant" and "java.security.AllPermission". One still needs access to the file system, so it may not do some people a lot of good; which is why, going forward with this series, I'll be making the effort to give every GSON specific task I perform a fair shake with the equivalent using the _com.ibm.commons.util.io.json_ package.
 

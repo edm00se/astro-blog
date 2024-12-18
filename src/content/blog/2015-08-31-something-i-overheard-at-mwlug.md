@@ -1,9 +1,9 @@
 ---
-title: 'Something I Overheard at MWLUG'
-description: 'on HTTP requests and application structure'
+title: "Something I Overheard at MWLUG"
+description: "on HTTP requests and application structure"
 pubDatetime: 2015-08-31
 published: true
-tags: ['mwlug', 'structure', 'rest', 'xpages']
+tags: ["mwlug", "structure", "rest", "xpages"]
 canonical_url: false
 category: app-structure
 permalink: /something-i-overheard/at/mwlug/
@@ -28,10 +28,10 @@ There's an intersting slump I experience after getting back from a conference. N
 
 While at MWLUG, I overheard someone make a reference to people "not liking POST" as an HTTP request. I'm fairly certain it may have been said in jest as [a blog post I wrote previously](/xpages/rest-is-best) talked about "classical" AJAX-y requests containing markup (specifically analagous to an XPages partial refresh event, which fires a dojo.xhrPost that returns the HTML content of the selected _refreshId_ and re-injects the content to the page). So here's a reminder to all, XPages gives us:
 
-* an application runtime (JSF)
-* a striped database (though for performance it's best to separate it)
-* with a greatly convenient security model (that makes it _very_ easy to map roles and groups across applications)
-* and a bunch of OoB (out of the box) controls that aid in [RAD](https://en.wikipedia.org/wiki/Rapid_application_development) and have some excellent hooks to automate a large number of functions ([ExtLib Relational controls](https://www-10.lotus.com/ldd/ddwiki.nsf/dx/Video__Using_the_Relational_Controls_in_the_Extension_Library), for instance)
+- an application runtime (JSF)
+- a striped database (though for performance it's best to separate it)
+- with a greatly convenient security model (that makes it _very_ easy to map roles and groups across applications)
+- and a bunch of OoB (out of the box) controls that aid in [RAD](https://en.wikipedia.org/wiki/Rapid_application_development) and have some excellent hooks to automate a large number of functions ([ExtLib Relational controls](https://www-10.lotus.com/ldd/ddwiki.nsf/dx/Video__Using_the_Relational_Controls_in_the_Extension_Library), for instance)
 
 [Update]
 
@@ -40,7 +40,6 @@ As Tony McGuckin pointed out on Twitter, there's more to the XPages runtime than
 ##### The Tweet
 
 {% tweet "tonymcguckin", "638678645595336704" %}
-
 
 ##### The Screen Shot
 

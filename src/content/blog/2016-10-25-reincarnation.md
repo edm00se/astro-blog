@@ -1,9 +1,9 @@
 ---
-title: 'Everything Old is New Again'
-description: 'reincarnating the blog for performance and readability'
+title: "Everything Old is New Again"
+description: "reincarnating the blog for performance and readability"
 pubDatetime: 2016-10-25
 published: true
-tags: ['site', 'admin', 'nifty', 'amp']
+tags: ["site", "admin", "nifty", "amp"]
 canonical_url: false
 category: admin
 permalink: /reincarnation/

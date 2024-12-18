@@ -1,9 +1,19 @@
 ---
-title: 'Enhanced Editors'
-description: 'doing more than notepad while being more lightweight than a full IDE'
+title: "Enhanced Editors"
+description: "doing more than notepad while being more lightweight than a full IDE"
 pubDatetime: 2016-05-27
 published: true
-tags: ['web', 'node', 'javascript', 'electron', 'atom', 'sublimetext', 'vs code', 'webstorm ide']
+tags:
+  [
+    "web",
+    "node",
+    "javascript",
+    "electron",
+    "atom",
+    "sublimetext",
+    "vs code",
+    "webstorm ide",
+  ]
 canonical_url: false
 category: web
 permalink: /enhanced-editors/
@@ -21,12 +31,12 @@ There are plenty of "fancy editors" to choose from. The fact of the matter is th
 
 The main contenders I see, at the moment, in no particular order, are:
 
-- [SublimeText](https://www.sublimetext.com/)* (my previous favorite)
+- [SublimeText](https://www.sublimetext.com/)\* (my previous favorite)
 - [Atom](https://atom.io/)
 - [VS Code](https://code.visualstudio.com/)
-- [WebStorm IDE](https://www.jetbrains.com/webstorm/)*
+- [WebStorm IDE](https://www.jetbrains.com/webstorm/)\*
 
-The last two are slightly more editors in the direction of IDEs, but they're definitely worthy of considering. Also of note*, SublimeText and WebStorm IDE are paid-for applications, though SublimeText 3 is free while it's in beta (which it has been for some time), with gentle periodic reminders suggesting a license purchase.
+The last two are slightly more editors in the direction of IDEs, but they're definitely worthy of considering. Also of note\*, SublimeText and WebStorm IDE are paid-for applications, though SublimeText 3 is free while it's in beta (which it has been for some time), with gentle periodic reminders suggesting a license purchase.
 
 #### Why I Like SublimeText
 

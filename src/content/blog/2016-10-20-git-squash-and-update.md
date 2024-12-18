@@ -1,9 +1,9 @@
 ---
-title: 'Git Squash'
-description: 'and a couple updates'
+title: "Git Squash"
+description: "and a couple updates"
 pubDatetime: 2016-10-20
 published: true
-tags: ['scm', 'git', 'xpages', 'ibm']
+tags: ["scm", "git", "xpages", "ibm"]
 canonical_url: false
 category: scm
 permalink: /git-squash-and-update/
@@ -35,14 +35,14 @@ For the majority of my history on this blog, I've taken an approach to creating 
 Instead of looking for all the relevant links to list out here myself, I'm going to blatantly share a link to [Johnny Oldenburger's blog post laying out a nice summary, "The Future of IBM Notes Domino and XPages Revealed ?"](https://xpagesandmore.blogspot.com/2016/10/the-future-of-ibm-notes-domino-and.html). The short version is to the effect of:
 
 - there is a road map
-- the "versioning" of Domino is switching from [semver](https://semver.org/)-like to feature packs*
+- the "versioning" of Domino is switching from [semver](https://semver.org/)-like to feature packs\*
 - some needed updates are coming (including an update to the JVM for 1.8, currently slated for Q1 2017 in FP8)
 
 \* As an aside, the shift to a rolling release mechanism has greatly helped one of our large projects at my day job. I still assign a version to the the release, but that's for internal tracking. The reduction in emphasis on monolithic style releases has aided our flexibility (and generally our sanity).
 
 ### Git Squash
 
-For starters, I'm not talking about the [family of fruit](https://en.wikipedia.org/wiki/Squash_(plant)) (including pumpkins and other gourds) or [the game](https://en.wikipedia.org/wiki/Squash_(sport)) often found adjacent to [racquetball](https://en.wikipedia.org/wiki/Racquetball) courts.
+For starters, I'm not talking about the [family of fruit](<https://en.wikipedia.org/wiki/Squash_(plant)>) (including pumpkins and other gourds) or [the game](<https://en.wikipedia.org/wiki/Squash_(sport)>) often found adjacent to [racquetball](https://en.wikipedia.org/wiki/Racquetball) courts.
 
 There comes a time on occasion, due to preference or rules of others (like in a Pull Request), that a developer may wish to "squash" their commits. This is, strictly speaking, just a `git rebase` going back `n` commits, to make the total summary of changes fit into a single commit. Essentially, you're making the commit history "easier to read" for the accepted changes and comes up more often in large code bases, especially with git repositories where people tend to perform a [rebase instead of merge](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/) or [squash merge](https://github.com/blog/2141-squash-your-commits), instead of just a merge.
 

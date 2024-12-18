@@ -1,9 +1,9 @@
 ---
-title: 'Unraveling the Mysteries'
-description: 'of M-V-C and better application architecture'
+title: "Unraveling the Mysteries"
+description: "of M-V-C and better application architecture"
 pubDatetime: 2014-09-16
 published: true
-tags: ['xpages', 'domino', 'java', 'rest', 'mvc']
+tags: ["xpages", "domino", "java", "rest", "mvc"]
 category: xpages
 permalink: /unraveling-the-mvc-mysteries/
 redirect_from: /xpages/unraveling-the-mvc-mysteries/

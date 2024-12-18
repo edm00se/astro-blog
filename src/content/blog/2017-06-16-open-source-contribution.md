@@ -1,15 +1,15 @@
 ---
-title: 'Open Source Contribution'
-description: 'learning by doing more and playing nice with others'
+title: "Open Source Contribution"
+description: "learning by doing more and playing nice with others"
 pubDatetime: 2017-06-16
 published: true
 tags:
-    - javascript
-    - open-source
-    - node
-    - prettier
-    - eslint
-    - jest
+  - javascript
+  - open-source
+  - node
+  - prettier
+  - eslint
+  - jest
 canonical_url: false
 category: open-source
 permalink: /os-contribution/
@@ -33,7 +33,7 @@ The project is [prettier-eslint's cli tool](https://github.com/kentcdodds/pretti
 This led to an observation that while I was getting the benefits of [prettier](https://npm.im/prettier), it was inducing a dangling comma, making it fail my [eslint](https://npm.im/eslint) configuration (which explicitly disallows them). While I could reconfigure my eslint config to accommodate for and/or use a dangling comma, that sort of defeats the purpose of plugging into an existing eslint config. The whole point of Mr. Dodds's [`prettier-eslint`](https://npm.im/prettier-eslint-) and its cli tool, [`prettier-eslint-cli`](https://npm.im/prettier-eslint-cli) which I was testing, was to provide a more seamless integration with the two.
 
 ![prettier working, just not playing great with eslint](./images/PrettierEslint_DanglingComma.png)
-*prettier working, just not playing great with eslint*
+_prettier working, just not playing great with eslint_
 
 #### Prettier?
 
@@ -49,8 +49,8 @@ Since this project was a CLI tool consuming a "regular" Node module (API), so th
 
 This speaks for itself. Once the logging was established, some modifications were made in the `-cli` project, and now it plays great with my project's eslint config. That's a big win, in my opinion. Here it is, doing what it does w/ the same section of my code, acting as I want and cleaning things up for me.
 
-![prettier working, and respecting the h\*ck out of my eslint config](./images/PrettierEslint_WorkingGreat.png)
-*prettier working, and respecting the h\*ck out of my eslint config*
+![prettier working, and respecting the h*ck out of my eslint config](./images/PrettierEslint_WorkingGreat.png)
+_prettier working, and respecting the h\*ck out of my eslint config_
 
 ### Shout Out
 

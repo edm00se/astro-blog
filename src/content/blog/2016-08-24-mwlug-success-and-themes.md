@@ -1,9 +1,24 @@
 ---
-title: 'MWLUG Success'
-description: 'and some thoughts on themes of the conference'
+title: "MWLUG Success"
+description: "and some thoughts on themes of the conference"
 pubDatetime: 2016-08-24
 published: true
-tags: ['node', 'npm', 'yeoman', 'angular', 'vue.js', 'webpack', 'java', 'xpages', 'rest', 'api', 'scm', 'git', 'mwlug']
+tags:
+  [
+    "node",
+    "npm",
+    "yeoman",
+    "angular",
+    "vue.js",
+    "webpack",
+    "java",
+    "xpages",
+    "rest",
+    "api",
+    "scm",
+    "git",
+    "mwlug",
+  ]
 canonical_url: false
 category: self-promotion
 permalink: /mwlug-success-and-themes/
@@ -40,13 +55,13 @@ Also known as "topics I ran out of time for", but that's the hazard of doing a "
 
 Some specific tools I used and demonstrated were:
 
-| Tool                                                   | Purpose                                                    |
-| ------------------------------------------------------ | ---------------------------------------------------------- |
-| [generator-xsp](https://npm.im/generator-xsp)           | For scaffolding out a Domino/XPages compatible ODP         |
-| [angular-cli](https://npm.im/angular-cli)               | For scaffolding out an Angular(2) app                      |
-| [vue-cli](https://npm.im/vue-cli)                       | For scaffolding out a vue.js app                           |
-| [npm scripts](https://css-tricks.com/why-npm-scripts/) | For scaffolding out a Domino/XPages compatible ODP         |
-| [webpack](https://webpack.github.io/)                  | As part of angular-cli(@webpack) and vue-cli dependencies  |
+| Tool                                                   | Purpose                                                   |
+| ------------------------------------------------------ | --------------------------------------------------------- |
+| [generator-xsp](https://npm.im/generator-xsp)          | For scaffolding out a Domino/XPages compatible ODP        |
+| [angular-cli](https://npm.im/angular-cli)              | For scaffolding out an Angular(2) app                     |
+| [vue-cli](https://npm.im/vue-cli)                      | For scaffolding out a vue.js app                          |
+| [npm scripts](https://css-tricks.com/why-npm-scripts/) | For scaffolding out a Domino/XPages compatible ODP        |
+| [webpack](https://webpack.github.io/)                  | As part of angular-cli(@webpack) and vue-cli dependencies |
 
 Many scaffolding tools make use of [npm scripts](https://css-tricks.com/why-npm-scripts/) for [build pipelines](https://blog.modulus.io/using-npm-scripts-to-build-asset-pipeline) and they're handy to learn regardless.
 

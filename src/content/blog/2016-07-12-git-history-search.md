@@ -1,9 +1,9 @@
 ---
-title: 'Git History Searching'
-description: 'a quick git tip'
+title: "Git History Searching"
+description: "a quick git tip"
 pubDatetime: 2016-07-12
 published: true
-tags: ['scm', 'git']
+tags: ["scm", "git"]
 canonical_url: false
 category: scm
 permalink: /git-history-search/
@@ -51,7 +51,7 @@ In my Windows vm, the Git BASH shell environment contained git command completio
 - download your [bash](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash), [zsh](https://github.com/git/git/blob/master/contrib/completion/git-completion.zsh), or [other](https://github.com/git/git/tree/master/contrib/completion) autocompletion file
 - source the autocompletion file from your `.bashrc`, `.zshrc`, etc. ([git-scm.com talks about this very thing](https://git-scm.com/book/en/v1/Git-Basics-Tips-and-Tricks#Auto-Completion))
 
-If you're unsure what I mean by "Git BASH" and find yourself working in [SourceTree](https://www.sourcetreeapp.com/) on Windows, try clicking on the button in the upper bar on the far right, that says "Terminal". That "Terminal" button will, on Windows, launch the "Git BASH" shell, which is a [cygwin](https://www.cygwin.com/) derived environment that lets you interact with a more *nix-like CLI.
+If you're unsure what I mean by "Git BASH" and find yourself working in [SourceTree](https://www.sourcetreeapp.com/) on Windows, try clicking on the button in the upper bar on the far right, that says "Terminal". That "Terminal" button will, on Windows, launch the "Git BASH" shell, which is a [cygwin](https://www.cygwin.com/) derived environment that lets you interact with a more \*nix-like CLI.
 
 ### Summary
 

@@ -7,7 +7,7 @@ export const SITE: Site = {
   gravatar: {
     url: "https://avatars.githubusercontent.com/u/622118?v=4&s=240",
     width: "240",
-    height: "240"
+    height: "240",
   },
   profile: "https://edm00se.codes/",
   desc: "software development, operations, tooling, and tech musings",

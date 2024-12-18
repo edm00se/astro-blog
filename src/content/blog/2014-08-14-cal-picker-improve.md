@@ -1,10 +1,10 @@
 ---
-title: 'Variations on a Function: XPages Calendar Picker Improver, a Dojo Version'
+title: "Variations on a Function: XPages Calendar Picker Improver, a Dojo Version"
 pubDatetime: 2014-08-14
 published: true
-tags: ['xpages', 'domino', 'javascript', 'dojo']
+tags: ["xpages", "domino", "javascript", "dojo"]
 canonical_url: false
-description: 'a dojo-only version of the calendar picker improver script by Mark Roden'
+description: "a dojo-only version of the calendar picker improver script by Mark Roden"
 category: xpages
 permalink: /cal-picker-improver-dojo-only/
 redirect_from: /xpages/cal-picker-improver-dojo-only/

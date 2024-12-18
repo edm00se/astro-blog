@@ -1,9 +1,9 @@
 ---
-title: 'Please Vote for My Abstract'
+title: "Please Vote for My Abstract"
 description: "influence IBM ConnectED 2015's sessions"
 pubDatetime: 2014-11-19
 published: true
-tags: ['xpages', 'domino', 'ibm', 'angularjs', 'mvc', 'bootstrap']
+tags: ["xpages", "domino", "ibm", "angularjs", "mvc", "bootstrap"]
 category: self-promotion
 permalink: /vote-for-me/
 redirect_from: /self-promotion/vote-for-me/

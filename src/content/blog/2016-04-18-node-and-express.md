@@ -1,9 +1,9 @@
 ---
-title: 'Using Node to Connect to ... Almost Anything'
-description: 'the options are nearly limitless'
+title: "Using Node to Connect to ... Almost Anything"
+description: "the options are nearly limitless"
 pubDatetime: 2016-04-18
 published: true
-tags: ['node', 'express', 'iseries', 'jdbc', 'jt400', 'notes', 'domino', 'nsf']
+tags: ["node", "express", "iseries", "jdbc", "jt400", "notes", "domino", "nsf"]
 series: node-express-iseries-nsf
 canonical_url: false
 category: node
@@ -26,10 +26,10 @@ I'm using [Express](https://expressjs.com/) to assist in some of the web server 
 
 This will illustrate setting up an Express app with:
 
-* a highly configurable app layout, with:
-  * app `config` module
-  * a `routes` module
-* data access through a `util` module
+- a highly configurable app layout, with:
+  - app `config` module
+  - a `routes` module
+- data access through a `util` module
 
 I am not demonstrating:
 
@@ -41,10 +41,10 @@ I am not demonstrating:
 
 Structurally speaking, both versions are the same app, just with different data services plugged into them. At a high level, the common parts are:
 
-* `server.js` - contains the main definition of the server, creates the app as an Express app, and pulls in the `routes` module (Node is generally pretty big on the [module design pattern](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript))
-* the `routes`  module, which since the `require` pulls it in by directory, it grabs the `/routes/index.js` first, which then pulls in the other endpoints' `.js` files, establishing the route information for those collections (and inevitably more beyond this example)
-* each of those endpoint definition files perform the data service operations via functions defined in the `util` module (this is where I copied in a version of the functions to perform the actual API specific look ups, wrapped up and exported again as a module)
-* the `util` module and `server.js` make use of some app config, which is defined in the `config` module, which also allows for a couple of environment variables
+- `server.js` - contains the main definition of the server, creates the app as an Express app, and pulls in the `routes` module (Node is generally pretty big on the [module design pattern](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript))
+- the `routes` module, which since the `require` pulls it in by directory, it grabs the `/routes/index.js` first, which then pulls in the other endpoints' `.js` files, establishing the route information for those collections (and inevitably more beyond this example)
+- each of those endpoint definition files perform the data service operations via functions defined in the `util` module (this is where I copied in a version of the functions to perform the actual API specific look ups, wrapped up and exported again as a module)
+- the `util` module and `server.js` make use of some app config, which is defined in the `config` module, which also allows for a couple of environment variables
 
 Here's a project tree breakdown, minus the `node_modules` folder, ReadMe, etc.:
 

@@ -1,9 +1,18 @@
 ---
-title: 'Blue Chalky Soup'
-description: 'repo now on GitHub, a few Bluemix thoughts'
+title: "Blue Chalky Soup"
+description: "repo now on GitHub, a few Bluemix thoughts"
 pubDatetime: 2015-02-02
 published: true
-tags: ['xpages', 'domino', 'ibm', 'connected', 'conference', 'lotussphere', 'bluemix']
+tags:
+  [
+    "xpages",
+    "domino",
+    "ibm",
+    "connected",
+    "conference",
+    "lotussphere",
+    "bluemix",
+  ]
 category: bluemix
 permalink: /bluemix-chalky-soup/
 redirect_from: /bluemix/bluemix-chalky-soup/
@@ -77,7 +86,6 @@ My initial trial account, which is tied to my IBM ID, has a 30-day window in whi
 
 Why can't we just have a free account that doesn't incur charges? There must be some other way in between; the other guys are doing it. In fact, the way heroku tends to work is, if your account is of the free/developer flavor, they'll shut down your running instances after a period of inactivity. This incurs a bit more instantiation (and wait time) by the first user of that application after it was inactive, but still provides for a purely free mechanism. The organization (hierarchy inside of Bluemix requires an org) of "Eric McCormick" shouldn't need to pay for that hair brained developer Eric McCormick's wild online blogging success, should a test/demo app URL ever leak (case in point, even if I had to cheese it up there). This is where IBM comes just short of what I would like.
 
-
 ![no trial period then credit card, I have an app running perpetually, which is most often inactive](./images/bluemix_thoughts/HerokuSignupFreeAcct.png)
 
 ![OpenShift does something similar](./images/bluemix_thoughts/OpenShiftSignupFreeAcct.png)
@@ -86,11 +94,11 @@ Why can't we just have a free account that doesn't incur charges? There must be 
 
 That being said, I am fairly well sold on Bluemix. It maps very well to where I think a few of our critical, high volume applicaitons should be in a year to two's time. It maps well to our existing application structures, including the pending Domino Data Service, which makes for an easy sell with regards to what hopefully could lead to on-premises replication of data (be it app data storage or names.nsf sync) and the XPages runtime (application format that they already know about) in addition to Domino Data Service being usable outside the XPage runtime (e.g.- Node.js or Java Liberty; these are exciting times!). It's also a PaaS offering from IBM, a company which mine already knows well, as opposed to the competitors, which they wouldn't necessarily think/know of. These are things that help in selling the platform to my management. This all leads to my request. For us, IBM platform developers, to either:
 
-* not need to enter a credit card for a free account (cripple what we can have after the 30-day trial, inactivate idle sessions, something, anything)
+- not need to enter a credit card for a free account (cripple what we can have after the 30-day trial, inactivate idle sessions, something, anything)
 
 or
 
-* configure our account (with credit card on file) to inactivate when idle or halt applications at the point of charges would incur.
+- configure our account (with credit card on file) to inactivate when idle or halt applications at the point of charges would incur.
 
 I'm honestly not trying to sound like a cheap college student (he's still inside, somewhere), but if IBM can let us do one or both of these things, Bluemix adoption rate will only benefit from it.
 

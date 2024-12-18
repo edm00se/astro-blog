@@ -1,9 +1,9 @@
 ---
-title: 'Notes in 9: Dev Tools Grab Bag'
-description: 'a pair of Node-based tools for use with Domino + XPages'
+title: "Notes in 9: Dev Tools Grab Bag"
+description: "a pair of Node-based tools for use with Domino + XPages"
 pubDatetime: 2017-04-04
 published: true
-tags: ['xpages', 'node', 'npm', 'ni9', 'dora', 'generator-xsp']
+tags: ["xpages", "node", "npm", "ni9", "dora", "generator-xsp"]
 canonical_url: false
 category: self-promotion
 permalink: /ni9-node-tools-grab-bag/
@@ -41,7 +41,7 @@ For anyone looking to reference my notes from the screencast, you can find that 
 ##### Required
 
 - [node](https://nodejs.org/) (+ npm)
-    - recommend [nvm](https://github.com/creationix/nvm/blob/master/README.markdown#installation), [n](https://github.com/tj/n#readme), or [nodist](https://github.com/marcelklehr/nodist#readme)
+  - recommend [nvm](https://github.com/creationix/nvm/blob/master/README.markdown#installation), [n](https://github.com/tj/n#readme), or [nodist](https://github.com/marcelklehr/nodist#readme)
 - [yo](https://yeoman.io/) + [generator-xsp](https://github.com/edm00se/generator-xsp)
 
 ##### Goal
@@ -49,10 +49,10 @@ For anyone looking to reference my notes from the screencast, you can find that 
 1. set up app from scratch
 2. config or existing app's ODP
 3. create elements from sub-generators
-    - XPage
-    - Class
-    - managed bean (configured in `faces-config.xml`)
-    - "rest", which creates an `xe:restService` control, using an `xe:customRestService` with `CustomServiceBean` to back the logic
+   - XPage
+   - Class
+   - managed bean (configured in `faces-config.xml`)
+   - "rest", which creates an `xe:restService` control, using an `xe:customRestService` with `CustomServiceBean` to back the logic
 
 ##### Result
 

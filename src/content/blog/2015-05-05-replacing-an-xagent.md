@@ -1,10 +1,10 @@
 ---
-title: 'From XAgents to Servlets'
+title: "From XAgents to Servlets"
 description: "adopt the industry practice, don't forget what you've learned"
 pubDatetime: 2015-05-05
 published: true
 series: xpages-servlets
-tags: ['xpages', 'domino', 'java', 'servlet']
+tags: ["xpages", "domino", "java", "servlet"]
 category: xpages-servlets
 permalink: /replacing-an-xagent/
 redirect_from: /xpages-servlets/replacing-an-xagent/

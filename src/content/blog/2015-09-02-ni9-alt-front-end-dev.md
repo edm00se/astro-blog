@@ -1,9 +1,9 @@
 ---
-title: 'Notes in 9: Alternative Front-End Development'
+title: "Notes in 9: Alternative Front-End Development"
 description: "segregated application development at its best"
 pubDatetime: 2015-09-02
 published: true
-tags: ['front-end', 'structure', 'rest', 'xpages', 'ni9']
+tags: ["front-end", "structure", "rest", "xpages", "ni9"]
 category: self-promotion
 permalink: /ni9-alt-front-end-dev/
 redirect_from: /self-promotion/ni9-alt-front-end-dev/

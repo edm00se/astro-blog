@@ -1,9 +1,9 @@
 ---
-title: 'Community, Coding'
-description: 'and the evolution of application design'
+title: "Community, Coding"
+description: "and the evolution of application design"
 pubDatetime: 2014-08-31
 published: true
-tags: ['xpages', 'domino', 'java', 'data', 'angularjs', 'mwlug', 'conference']
+tags: ["xpages", "domino", "java", "data", "angularjs", "mwlug", "conference"]
 category: xpages
 permalink: /community-code-and-evolution/
 redirect_from: /xpages/community-code-and-evolution/

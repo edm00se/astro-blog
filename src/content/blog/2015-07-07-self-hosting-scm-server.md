@@ -1,9 +1,9 @@
 ---
-title: 'Self-Hosting SCM Server Options'
-description: 'a quick comparison and few observations'
+title: "Self-Hosting SCM Server Options"
+description: "a quick comparison and few observations"
 pubDatetime: 2015-07-07
 published: true
-tags: ['source control', 'redmine', 'gitlab', 'gogs', 'github', 'bitbucket']
+tags: ["source control", "redmine", "gitlab", "gogs", "github", "bitbucket"]
 category: scm
 permalink: /self-hosting-scm-server/
 redirect_from: /scm/self-hosting-scm-server/

@@ -1,9 +1,9 @@
 ---
-title: 'Server REST Consumption with Authentication'
-description: 'consuming data on another server'
+title: "Server REST Consumption with Authentication"
+description: "consuming data on another server"
 pubDatetime: 2014-08-19
 published: true
-tags: ['xpages', 'domino', 'java', 'rest', 'authentication']
+tags: ["xpages", "domino", "java", "rest", "authentication"]
 category: xpages
 permalink: /server-rest-with-authentication/
 redirect_from: /xpages/server-rest-with-authentication/

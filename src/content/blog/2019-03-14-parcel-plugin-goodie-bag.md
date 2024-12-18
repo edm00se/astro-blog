@@ -1,9 +1,9 @@
 ---
-title: 'A Parcel Plugin For Goodies'
-description: 'making IE(11) support just a bit easier'
+title: "A Parcel Plugin For Goodies"
+description: "making IE(11) support just a bit easier"
 pubDatetime: 2019-03-14
 published: true
-tags: ['web', 'parcel', 'plugin', 'javscript', 'ie']
+tags: ["web", "parcel", "plugin", "javscript", "ie"]
 canonical_url: false
 category: web
 permalink: /parcel-plugin-goodie-bag/
@@ -53,8 +53,8 @@ npm install --save-dev parcel-plugin-goodie-bag
 What's happening under the hood is:
 
 - a bundled version of a polyfill for both `Promise` and `fetch` APIs is assembled
-   - using the [es6 `Promise` polyfill][poly-es6]
-   - also the [unfetch `fetch` polyfill][poly-unfetch]
+  - using the [es6 `Promise` polyfill][poly-es6]
+  - also the [unfetch `fetch` polyfill][poly-unfetch]
 - copies this combination polyfill to the destination directory
 - it listens for a root `index.html` bundling event from Parcel
 - it injects the generated polyfill file at the beginning of the `head` tag in that root `index.html` file (so as to load before Parcel's loader)

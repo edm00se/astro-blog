@@ -1,20 +1,19 @@
 ---
-title: 'Good News'
-description: 'and a little retrospective'
+title: "Good News"
+description: "and a little retrospective"
 pubDatetime: 2018-01-23
 published: true
-tags: ['scm', 'git', 'xpages', 'ibm', 'node']
+tags: ["scm", "git", "xpages", "ibm", "node"]
 canonical_url: false
 category: self-promotion
 permalink: /looking-back-and-forward/
 redirect_from: /self-promotion/looking-back-and-forward/
 ---
 
-
 The past year has been great fun. I've had a couple of major changes, including a change in job and beginning to work from home. I've also done a few different projects that I hadn't been involved in before. I'll get to those in a little bit, but first...
 
 !["good news everyone"](./images/GoodNewsEveryone.png)
-*How about some good news for a change?*
+_How about some good news for a change?_
 
 ### Thank You!
 
@@ -26,7 +25,7 @@ I am quite happy to have been named an IBM Champion, returning for the fourth ye
 
 #### New Things
 
-As I mentioned, I've gone down the proverbial rabbit-hole on a couple of different projects this past year. As usual, these  If you're interested or want to more about them, let me know. Here are some of the highlights.
+As I mentioned, I've gone down the proverbial rabbit-hole on a couple of different projects this past year. As usual, these If you're interested or want to more about them, let me know. Here are some of the highlights.
 
 - three [npm packages][npm-edm00se] published (of note)
   - [generator-xsp][gen-xsp], a yeoman generator for scaffolding an [XPages][xpages-info] compatible On Disk Project

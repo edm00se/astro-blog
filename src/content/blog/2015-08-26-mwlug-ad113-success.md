@@ -1,9 +1,9 @@
 ---
-title: 'MWLUG2015: AD113'
-description: 'Speed Up Your Applications With Nginx and PageSpeed'
+title: "MWLUG2015: AD113"
+description: "Speed Up Your Applications With Nginx and PageSpeed"
 pubDatetime: 2015-08-26
 published: true
-tags: ['mwlug', 'nginx', 'xpages']
+tags: ["mwlug", "nginx", "xpages"]
 canonical_url: false
 category: nginx
 permalink: /mwlug-ad113-success/
@@ -28,17 +28,17 @@ You can find [my slide deck on Slideshare](https://www.slideshare.net/edm00se/ad
 
 My session fits into the bigger picture, as I see it. With a front- and back-end segregated application development approach, lots of things become possible. I've talked about lots of reasons, my session focused on the ability to provide some excellent performance enhancements, all with freely available software, and give your users a better experience. The magic? It's all in a couple specific things, here are the highlights.
 
-* [Nginx](https://nginx.org/)
-  * reverse proxy and web server
-  * free
-* [PageSpeed](https://developers.google.com/speed/pagespeed/module/)
-  * ngx_pagespeed, the module for Nginx
-  * there's also an Apache module
-* PageSpeed Insights
-  * [easily shows areas for improvement](https://developers.google.com/speed/pagespeed/insights/?url=edm00se.io) (link shows my blog's ranking, pretty decent)
-* HTTPS/SSL hand off to Nginx
-* alternate options (paid)
-  * [CloudFlare](https://www.cloudflare.com/)
+- [Nginx](https://nginx.org/)
+  - reverse proxy and web server
+  - free
+- [PageSpeed](https://developers.google.com/speed/pagespeed/module/)
+  - ngx_pagespeed, the module for Nginx
+  - there's also an Apache module
+- PageSpeed Insights
+  - [easily shows areas for improvement](https://developers.google.com/speed/pagespeed/insights/?url=edm00se.io) (link shows my blog's ranking, pretty decent)
+- HTTPS/SSL hand off to Nginx
+- alternate options (paid)
+  - [CloudFlare](https://www.cloudflare.com/)
 
 ### Summary
 

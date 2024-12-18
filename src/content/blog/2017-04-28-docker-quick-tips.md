@@ -1,9 +1,9 @@
 ---
-title: 'Docker Quick Tips'
-description: 'containers for life'
+title: "Docker Quick Tips"
+description: "containers for life"
 pubDatetime: 2017-04-28
 published: true
-tags: ['docker', 'youtube', 'tips']
+tags: ["docker", "youtube", "tips"]
 canonical_url: false
 category: docker
 permalink: /docker-quick-tips/

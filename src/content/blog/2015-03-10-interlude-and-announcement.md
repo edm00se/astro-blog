@@ -1,10 +1,10 @@
 ---
-title: 'Interlude for Servlets'
-description: 'a 4-piece arrangement'
+title: "Interlude for Servlets"
+description: "a 4-piece arrangement"
 pubDatetime: 2015-03-10
 published: true
 series: xpages-servlets
-tags: ['admin']
+tags: ["admin"]
 canonical_url: false
 category: admin
 permalink: /interlude-and-announcement/

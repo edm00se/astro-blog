@@ -1,9 +1,9 @@
 ---
-title: 'Application Logic'
-description: 'where to keep it and why that matters'
+title: "Application Logic"
+description: "where to keep it and why that matters"
 pubDatetime: 2014-10-24
 published: true
-tags: ['xpages', 'javascript', 'mvc', 'rest', 'angularjs']
+tags: ["xpages", "javascript", "mvc", "rest", "angularjs"]
 category: xpages
 permalink: /application-logic/
 redirect_from: /xpages/application-logic/

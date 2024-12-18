@@ -1,10 +1,10 @@
 ---
-title: 'Building a Front-End, pt.1'
-description: 'a quick review'
+title: "Building a Front-End, pt.1"
+description: "a quick review"
 pubDatetime: 2015-06-16
 published: true
 series: xpages-servlets
-tags: ['xpages', 'domino', 'javascript', 'servlet', 'angularjs']
+tags: ["xpages", "domino", "javascript", "servlet", "angularjs"]
 category: xpages-servlets
 permalink: /building-a-front-end-pt1-a-quick-review/
 redirect_from: /xpages-servlets/building-a-front-end-pt1-a-quick-review/

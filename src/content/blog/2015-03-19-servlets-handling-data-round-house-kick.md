@@ -1,10 +1,10 @@
 ---
-title: 'Handling Data in a Servlet'
-description: 'going Chuck Norris on some data'
+title: "Handling Data in a Servlet"
+description: "going Chuck Norris on some data"
 pubDatetime: 2015-03-19
 published: true
 series: xpages-servlets
-tags: ['xpages', 'domino', 'java', 'servlet']
+tags: ["xpages", "domino", "java", "servlet"]
 canonical_url: false
 category: xpages-servlets
 permalink: /servlets/handling-data-round-house-kick/
@@ -22,13 +22,13 @@ Note: I'll be sticking to the same, vanilla Java approach I've used previously i
 
 The endpoint will accept (and return) only `application/json`. Here's the structure it'll take.
 
-| Route | Methods Allowed |
-|---------------------------|-------------------|
-| ...NSF/xsp/houses | GET |
-| | POST |
-| ...NSF/xsp/houses/{:unid} | GET |
-| | PUT |
-| | DELETE |
+| Route                     | Methods Allowed |
+| ------------------------- | --------------- |
+| ...NSF/xsp/houses         | GET             |
+|                           | POST            |
+| ...NSF/xsp/houses/{:unid} | GET             |
+|                           | PUT             |
+|                           | DELETE          |
 
 It's straight forward and follows with the approach I've previously laid out. Do note that to create a new entry, it will be taking a POST against the collection, whereas the individual entry will be accessed via GET to send the existing document, PUT to update partial information, and DELETE to do the obvious.
 
@@ -68,7 +68,7 @@ This concept relies on having an object model class. The modeling of my house ob
 
 ##### ToJson
 
-I also create the JSON with the Gson library, as I've covered both the Gson and [com.ibm.commons.util.io.json](https://gist.github.com/edm00se/e5626f63ef7573fd2f3e) approaches before, when it comes to creating a JSON string, so I won't repeat myself here. The only thing of major difference is to build out your response into a Java object, then use [a `com.ibm.commons.util.io.json.JsonGenerator`'s `toJson` method](https://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonGenerator.html#toJson(com.ibm.commons.util.io.json.JsonFactory,%20java.lang.Object)).
+I also create the JSON with the Gson library, as I've covered both the Gson and [com.ibm.commons.util.io.json](https://gist.github.com/edm00se/e5626f63ef7573fd2f3e) approaches before, when it comes to creating a JSON string, so I won't repeat myself here. The only thing of major difference is to build out your response into a Java object, then use [a `com.ibm.commons.util.io.json.JsonGenerator`'s `toJson` method](<https://public.dhe.ibm.com/software/dw/lotus/Domino-Designer/JavaDocs/DesignerAPIs/com/ibm/commons/util/io/json/JsonGenerator.html#toJson(com.ibm.commons.util.io.json.JsonFactory,%20java.lang.Object)>).
 
 ### An Object Model for (Almost) Everyone
 

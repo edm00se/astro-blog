@@ -1,9 +1,9 @@
 ---
-title: 'A Brief Intro to Nginx'
-description: 'liberating your DDE local web preview'
+title: "A Brief Intro to Nginx"
+description: "liberating your DDE local web preview"
 pubDatetime: 2015-03-23
 published: true
-tags: ['xpages', 'domino', 'javascript', 'nginx']
+tags: ["xpages", "domino", "javascript", "nginx"]
 canonical_url: false
 category: nginx
 permalink: /brief-intro-to-nginx/
@@ -17,7 +17,6 @@ This is a brief intro to nginx, the reverse proxying web server I've fallen in l
 While setting myself up for editing the AngularJS version of my app for [my Java servlet series](/servlet-series/), I set up my git repo to be accessible both inside and outside of my DDE vm, fired up local web preview, and realized that my connection to said local web preview was denying my connections, as I was accessing it from another IP. On top of all this, unless I'm hosting my HTML, JS, or CSS files (my static content) from within the design elements of Pages, Scripts, or Style Sheets, I wasn't going to get any _gzip_ response benefits, regardless of the XSP Properties setting.
 
 {% tweetbu "579458988883988480" %}
-
 
 ### Nginx: the 'What' and 'Why'
 
@@ -39,17 +38,17 @@ In order to access a server hosted within a vm (guest), for development purposes
 
 More information on the implementation of nginx in Windows can be found on [the corresponding docs page](https://nginx.org/en/docs/windows.html). Here's the basic breakdown of commands, form within the nginx install directory:
 
-| Command         |                                                                                      |
-|-----------------|--------------------------------------------------------------------------------------|
-| start nginx     | starts the process                                                                   |
-| nginx -s stop   | fast shutdown                                                                        |
-| nginx -s quit   | graceful shutdown                                                                    |
-| nginx -s reload | config change, graceful shutdown of existing worker proc, starts new                 |
-| nginx -s reopen | re-open log files                                                                    |
+| Command         |                                                                      |
+| --------------- | -------------------------------------------------------------------- |
+| start nginx     | starts the process                                                   |
+| nginx -s stop   | fast shutdown                                                        |
+| nginx -s quit   | graceful shutdown                                                    |
+| nginx -s reload | config change, graceful shutdown of existing worker proc, starts new |
+| nginx -s reopen | re-open log files                                                    |
 
 ### Description
 
-The config file contains a _server_ block, inside which is a _location /_ block. Inside that location block, we need to replace the root and index assignment with a *proxy_pass  https://127.0.0.1:8080;* line and a *proxy_http_version  1.1;* line.
+The config file contains a _server_ block, inside which is a _location /_ block. Inside that location block, we need to replace the root and index assignment with a _proxy_pass https://127.0.0.1:8080;_ line and a _proxy_http_version 1.1;_ line.
 
 ### Sample Nginx.conf
 

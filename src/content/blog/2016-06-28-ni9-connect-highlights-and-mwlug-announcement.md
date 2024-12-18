@@ -1,9 +1,9 @@
 ---
-title: 'Notes in 9: Highlights From My IBM Connect Session'
-description: 'AD1380: A Beard, an App, a Blender, and announcing MWLUG session'
+title: "Notes in 9: Highlights From My IBM Connect Session"
+description: "AD1380: A Beard, an App, a Blender, and announcing MWLUG session"
 pubDatetime: 2016-06-28
 published: true
-tags: ['scm', 'git', 'xpages', 'grunt', 'connect', 'ibm', 'ni9']
+tags: ["scm", "git", "xpages", "grunt", "connect", "ibm", "ni9"]
 canonical_url: false
 category: self-promotion
 permalink: /ni9-connect-highlights-and-mwlug-announcement/

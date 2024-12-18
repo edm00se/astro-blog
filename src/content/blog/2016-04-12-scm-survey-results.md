@@ -1,9 +1,9 @@
 ---
-title: 'SCM Survey Results'
-description: 'and a shout out'
+title: "SCM Survey Results"
+description: "and a shout out"
 pubDatetime: 2016-04-12
 published: true
-tags: ['scm', 'dvcs', 'vcs', 'git', 'hg', 'svn', 'cvs', 'ciao']
+tags: ["scm", "dvcs", "vcs", "git", "hg", "svn", "cvs", "ciao"]
 canonical_url: false
 category: scm
 permalink: /scm-survey-results/
@@ -32,14 +32,14 @@ Here is the main donut chart, which is the same from my [previous post](/scm/sou
 
 With a total of 53 unique responses (so far as I can tell), I feel like this was a pretty good turn out in number of votes. Here's the break down; note: I've omitted [CVS (concurrent versions system)](https://www.nongnu.org/cvs/), with 0 total votes.
 
-| Value            | Total         | Pct.   |
-| ---------------- |:-------------:| ------:|
-| git              | 35            | 66.04% |
-| Teamstudio Ciao  | 8             | 15.09% |
-| hg (mercurial)   | 4             |  7.55% |
-| svn (subversion) | 2             |  3.77% |
-| file system copy | 2             |  3.77% |
-| none             | 2             |  3.77% |
+| Value            | Total |   Pct. |
+| ---------------- | :---: | -----: |
+| git              |  35   | 66.04% |
+| Teamstudio Ciao  |   8   | 15.09% |
+| hg (mercurial)   |   4   |  7.55% |
+| svn (subversion) |   2   |  3.77% |
+| file system copy |   2   |  3.77% |
+| none             |   2   |  3.77% |
 
 I think it's not a huge surprise that [git](https://git-scm.com/) took first place; it's ubiquitous and used by lots of people. It's especially relevant, IMO, as GitHub is exclusively git and Bitbucket does both git and Hg. [Teamstudio Ciao!](https://www.teamstudio.com/solutions/notestools/ciao) had a pretty good showing as well, which probably reflects the demographics of my blog readers; I had to convert one value of an "other" entry which was a write-in of Ciao. [Mercurial (Hg)](https://www.mercurial-scm.org/) turned out decently as well, though behind the first two. We had a couple of [svn](https://subversion.apache.org/) fans as well. There are pros and cons to each scm, which is why I don't believe this to be a fight or even much of an argument, just a question of what's most valuable to the developer and their development team.
 
@@ -47,12 +47,12 @@ I think it's not a huge surprise that [git](https://git-scm.com/) took first pla
 
 For a clearer overall picture, I summed the values of those using a [dvcs](https://en.wikipedia.org/wiki/Distributed_version_control) (git or hg) to a value of 'distributed', those using a centralized version control system to a value of 'central' (this includes Teamstudio Ciao responses, as it requires a check-in, check-out mechanic), those using a file system copy to a value of 'questionable choices' (it's better than nothing I'll grant you, but you could be doing _so much more_), and those with none to 'living dangerously'. Those results, in table and pie chart form:
 
-| Value                | Total         | Pct.   |
-| -------------------- |:-------------:| ------:|
-| distributed          | 39            | 73.58% |
-| central              | 10            | 18.87% |
-| questionable choices | 2             |  3.77% |
-| live dangerously     | 2             |  3.77% |
+| Value                | Total |   Pct. |
+| -------------------- | :---: | -----: |
+| distributed          |  39   | 73.58% |
+| central              |  10   | 18.87% |
+| questionable choices |   2   |  3.77% |
+| live dangerously     |   2   |  3.77% |
 
 <div class="text-center">
   <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1AW-db53FKmx_ppiXGpByjNxNVf99SjP3dlx7vnKqh_E/pubchart?oid=1995419265&amp;format=interactive"></iframe>

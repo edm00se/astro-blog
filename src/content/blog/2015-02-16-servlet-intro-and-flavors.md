@@ -1,9 +1,9 @@
 ---
-title: 'Servlet Basics'
-description: 'an introduction'
+title: "Servlet Basics"
+description: "an introduction"
 pubDatetime: 2015-02-16
 published: true
-tags: ['xpages', 'domino', 'java', 'servlet']
+tags: ["xpages", "domino", "java", "servlet"]
 series: xpages-servlets
 canonical_url: false
 category: xpages-servlets
@@ -49,7 +49,7 @@ An `HttpServlet` is exactly what it claims, but probably isn't the best option f
 
 #### DesignerFacesServlet
 
-So, in order to do anything derived off of FacesContext, we'll need a better implementation of our servlet. [Jesse Gallagher has blogged about this very topic](//frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1), big surprise there 😉. Some of the benefits include access to *Scope'd variables and any managed beans.
+So, in order to do anything derived off of FacesContext, we'll need a better implementation of our servlet. [Jesse Gallagher has blogged about this very topic](//frostillic.us/blog/posts/159496067A27FD3585257A70005E7BC1), big surprise there 😉. Some of the benefits include access to \*Scope'd variables and any managed beans.
 
 {% gist "edm00se", "fd47302a1918c93a262f", "com.hello.servlets.ExampleDesignerFacesServlet.java" %}
 

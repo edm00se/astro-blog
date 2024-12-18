@@ -1,14 +1,13 @@
 ---
-title: 'Redmine, CodeRay, and Domino, Oh My!'
+title: "Redmine, CodeRay, and Domino, Oh My!"
 pubDatetime: 2014-08-11
 published: true
-tags: ['xpages', 'domino', 'redmine', 'source control']
+tags: ["xpages", "domino", "redmine", "source control"]
 canonical_url: false
-description: 'getting the syntax highlighting everyone wants'
+description: "getting the syntax highlighting everyone wants"
 category: xpages
 permalink: /redmine-coderay-domino-syntax-highlighting/
 redirect_from: /xpages/redmine-coderay-domino-syntax-highlighting/
-
 ---
 
 ### Syntax Highlighting in Redmine Project Repository

@@ -1,9 +1,9 @@
 ---
-title: 'DesignerFacesServlets on Bluemix'
+title: "DesignerFacesServlets on Bluemix"
 description: "everyone's a critic"
 pubDatetime: 2015-09-25
 published: false
-tags: ['xpages', 'bluemix', 'xpages-servlets']
+tags: ["xpages", "bluemix", "xpages-servlets"]
 canonical_url: false
 category: bluemix
 permalink: /everyone-is-a-criic/
@@ -12,7 +12,7 @@ redirect_from: /bluemix/everyone-is-a-critic/
 
 #### Everyone's A Critic
 
-My daughter apparently wanted to contribute towards the end of this, she grew tired of just listening to my talking and decided to  join in. In any case, I spent a little time getting my proof of concept (prior to my demo app) lined up and ready for XPages on Bluemix. Cheers 🍻!
+My daughter apparently wanted to contribute towards the end of this, she grew tired of just listening to my talking and decided to join in. In any case, I spent a little time getting my proof of concept (prior to my demo app) lined up and ready for XPages on Bluemix. Cheers 🍻!
 
 #### The Video
 
